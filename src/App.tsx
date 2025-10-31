@@ -8,6 +8,7 @@ import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import OurTeam from "./pages/OurTeam";
 import PageNotFound from "./pages/PageNotFount";
+import PastEvents from "./pages/PastEvents";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="/our-team" element={<OurTeam />} />
+        <Route path="/past-events" element={<PastEvents />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )

@@ -1,13 +1,6 @@
-import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 
 export default function PageNotFound() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setIsVisible(true), 200);
-  }, []);
-
   return (
     <div className="min-h-screen flex items-center justify-center px-6 relative ">
       {/* Animated grid pattern */}
@@ -23,11 +16,7 @@ export default function PageNotFound() {
         {/* 404 Number */}
         <div
           className={`transition-all duration-1000 ease-out
-                      ${
-                        isVisible
-                          ? "translate-y-0 opacity-100"
-                          : "translate-y-20 opacity-0"
-                      }`}
+                      `}
         >
           <h1 className="text-[150px] sm:text-[200px] lg:text-[250px] font-bold text-[#283618] leading-none mb-4">
             404
@@ -38,11 +27,7 @@ export default function PageNotFound() {
         {/* Title */}
         <h2
           className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-[#283618] mb-6 transition-all duration-1000 ease-out delay-200
-                      ${
-                        isVisible
-                          ? "translate-y-0 opacity-100"
-                          : "translate-y-20 opacity-0"
-                      }`}
+                     `}
         >
           Page Not Found
         </h2>
@@ -50,13 +35,9 @@ export default function PageNotFound() {
         {/* Buttons */}
         <div
           className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 ease-out delay-600
-                      ${
-                        isVisible
-                          ? "scale-100 opacity-100"
-                          : "scale-75 opacity-0"
-                      }`}
+                      `}
         >
-          <p
+          <div
             className="bg-[#FDBF57] text-[#283618] px-8 py-4 rounded-full text-lg font-semibold
                      hover:bg-white hover:scale-110 transition-all duration-300 shadow-xl hover:shadow-2xl
                      relative overflow-hidden group"
@@ -65,7 +46,7 @@ export default function PageNotFound() {
               Return Home
             </NavLink>
             <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-          </p>
+          </div>
 
           <p
             className="bg-transparent border-2 border-white text-[#283618] px-8 py-4 rounded-full text-lg font-semibold
@@ -78,11 +59,7 @@ export default function PageNotFound() {
         {/* Animated chart going down (opposite of your rising chart) */}
         <svg
           className={`absolute bottom-0 left-0 w-full h-64 opacity-10 pointer-events-none transition-all duration-2000 delay-1000
-                      ${
-                        isVisible
-                          ? "translate-y-0 opacity-10"
-                          : "translate-y-20 opacity-0"
-                      }`}
+                      `}
           viewBox="0 0 1000 300"
           preserveAspectRatio="none"
         >

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PopUp from "./PopUp";
 import NavBarLink from "./NavBarLink";
+import { NavLink } from "react-router";
 
 export default function Navbar() {
   const [clientWidth, setClientWidth] = useState<number>(window.innerWidth);
@@ -23,7 +24,7 @@ export default function Navbar() {
                         transition-all duration-700 delay-200
                         `}
         >
-          <div className="relative">
+          <NavLink className="relative" to={"/"}>
             <img
               src="/apple-touch-icon.png"
               alt=""
@@ -35,7 +36,7 @@ export default function Navbar() {
               className="absolute inset-0 rounded-lg bg-[#FDBF57]/0 group-hover:bg-[#FDBF57]/20 
                             transition-all duration-300 blur-sm"
             ></div>
-          </div>
+          </NavLink>
           <h2 className="text-[30px] text-[#283618] font-bold relative overflow-hidden">
             Lexingworth
             {/* Animated underline */}
@@ -66,8 +67,8 @@ export default function Navbar() {
               colour="black"
             />
             <NavBarLink
-              page="/our-team"
-              text="About"
+              page="/past-events"
+              text="Past Events"
               widthPercent={20}
               fontSize={15}
               alignment="center"
