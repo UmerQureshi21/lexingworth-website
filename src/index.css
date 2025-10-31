@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+
+* {
+
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Center align the starting point */
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.3s ease; /* Smooth expand + retract */
+}
+
+.navbar-link:hover::before {
+  width: 100%; /* Expands equally in both directions */
+}
+
+.faq-question::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  top: 20px;
+  right: 0;
+  background-color: #283618;
+}
+
+.faq-question::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 30px;
+  top: 6px;
+  right: 14px;
+  background-color: #283618;
+  transition: transform 0.5s ease;
+}
+
+.faq-mouse-down::after {
+  transform: rotateZ(270deg);
+}
+
+.faq-mouse-up::after {
+  transform: rotateZ(0deg);
+}
