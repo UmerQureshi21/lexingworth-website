@@ -1,10 +1,13 @@
+import { NavLink } from "react-router";
+
 interface props {
   text: string;
   widthPercent: number;
   fontSize: number;
   marginTop?: number;
   alignment?: string;
-  colour?: string;
+  colour: string;
+  page: string;
 }
 
 export default function NavBarLink({
@@ -13,18 +16,27 @@ export default function NavBarLink({
   fontSize,
   marginTop = 0,
   alignment = "left",
-  colour = "black",
+  colour,
+  page,
 }: props) {
   return (
-    <button
-      className={`navbar-link text-[${colour}] text-${alignment} border-b-[0.5px] border-b-[black] relative h-fit inline-block hover:cursor-pointer`}
+    <NavLink
+      to={page}
+      className={`before:bg-[${colour}] navbar-link border-b-[0.5px] border-b-[${colour}] relative h-fit inline-block hover:cursor-pointer`}
       style={{
         width: `${widthPercent}%`,
         fontSize: `${fontSize}px`,
         marginTop: `${marginTop}px`,
       }}
     >
-      {text}
-    </button>
+      <p
+        className={`text-${alignment}`}
+        style={{
+          color: colour,
+        }}
+      >
+        {text}
+      </p>
+    </NavLink>
   );
 }

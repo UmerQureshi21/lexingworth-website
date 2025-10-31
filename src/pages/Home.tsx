@@ -12,10 +12,6 @@ const descriptiveBoxes = [
     title: "Our Vision",
     des: "Our vision is to provide our members exclusive and hands on experience through exposure to the finance industry, active daily financial management, and participation in stock pitch competitions.",
   },
-  {
-    title: "Who we serve",
-    des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, augue ornare ultrices cursus, urna magna aliquet neque, quis fringilla libero arcu sed ex. ",
-  },
 ];
 
 const whatWeOffer = [
@@ -43,7 +39,7 @@ export default function Home() {
             key={index}
             title={db.title}
             des={db.des}
-            textSize={50}
+            textSize={60}
             widthPercent={90 / descriptiveBoxes.length}
           />
         ))}

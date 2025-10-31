@@ -24,7 +24,6 @@ h1 {
   transform: translateX(-50%); /* Center align the starting point */
   width: 0;
   height: 1px;
-  background-color: black;
   transition: width 0.3s ease; /* Smooth expand + retract */
 }
 
