@@ -115,8 +115,8 @@ export default function PopUp() {
             }}
           >
             <NavBarLink
-              page="/our-team"
-              text="About"
+              page="/past-events"
+              text="Past Events"
               widthPercent={90}
               fontSize={40}
               colour="white"
@@ -128,7 +128,7 @@ export default function PopUp() {
             }}
           >
             <NavBarLink
-              page="/our-team"
+              page="/dummy-link"
               text="Contact"
               widthPercent={90}
               fontSize={40}

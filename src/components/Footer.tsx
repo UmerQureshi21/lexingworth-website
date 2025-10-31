@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export default function Footer() {
   return (
     <footer className="bg-[#283618] text-white pt-28 pb-8">
@@ -61,20 +63,20 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-[#FDBF57] transition-colors duration-300"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                <NavLink
+                  to="/our-team"
                   className="text-gray-300 hover:text-[#FDBF57] transition-colors duration-300"
                 >
                   Our Team
-                </a>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/past-events"
+                  className="text-gray-300 hover:text-[#FDBF57] transition-colors duration-300"
+                >
+                  Past Events
+                </NavLink>
               </li>
             </ul>
           </div>

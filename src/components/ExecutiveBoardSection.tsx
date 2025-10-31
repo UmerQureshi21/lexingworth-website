@@ -136,35 +136,35 @@ export default function ExecutiveBoardSection() {
   const executives = [
     {
       name: "Rohin Mahendra",
-      position: "Chief Executive Officer",
+      position: "Co-CEO",
       bio: "4th year Honours Bachelor of Commerce @ McMaster, Finance with minors in Innovation and Economics.",
       image: "/exec_team/rohin.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/rohin-mahendra/",
     },
     {
       name: "Farhaan Syed",
-      position: "Chief Executive Officer",
+      position: "Co-CEO",
       bio: "5th year Honours Bachelor of Commerce @ McMaster. Specialization in Finance @ DeGroote School of Business.",
       image: "/exec_team/farhaan.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/farhaan-syed/",
     },
     {
       name: "Paul Lapinski",
-      position: "Chief Operating Officer",
+      position: "COO",
       bio: "3rd year Honours Bachelor of Commerce @ McMaster",
       image: "/exec_team/paul.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/paul-lapinski-05a05z/",
     },
     {
       name: "Umer Qureshi",
-      position: "Chief Technology Officer",
+      position: "CTO",
       bio: "2nd year Computer Science @ McMaster",
       image: "/exec_team/umer.jpg",
       linkedinUrl: "https://www.linkedin.com/in/umer-qureshi06/",
     },
     {
       name: "Allen Zhou",
-      position: "Chief Investment Officer",
+      position: "CIO",
       bio: "5th year Honours Bachelor of Commerce @ McMaster",
       image: "/exec_team/allen.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/allen-zhou-/",
@@ -213,9 +213,22 @@ export default function ExecutiveBoardSection() {
           </p>
         </div>
 
+        <div className="grid grid-cols-1  gap-10">
+          {executives.slice(0, 2).map((exec, index) => (
+            <ExecutiveBoardCard
+              key={index}
+              name={exec.name}
+              position={exec.position}
+              bio={exec.bio}
+              image={exec.image}
+              linkedinUrl={exec.linkedinUrl}
+            />
+          ))}
+        </div>
+
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {executives.map((exec, index) => (
+        <div className="mt-[100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {executives.slice(2).map((exec, index) => (
             <ExecutiveBoardCard
               key={index}
               name={exec.name}
