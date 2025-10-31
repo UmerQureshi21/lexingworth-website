@@ -19,24 +19,24 @@ export default function PopUp() {
   useEffect(() => {
     if (isClicked) {
       const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
+      document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
-      document.body.style.overflow = 'hidden';
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
     } else {
       const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.overflow = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
 
     return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.overflow = '';
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
     };
   }, [isClicked]);
 
@@ -62,8 +62,8 @@ export default function PopUp() {
             setClicked((prev) => !prev);
           }}
         >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"
             className="fill-white w-4 h-4"
           >
@@ -83,25 +83,58 @@ export default function PopUp() {
         </div>
 
         <div className="w-[90%] flex flex-col relative space-y-6 z-10">
-          <NavBarLink text="Home" widthPercent={90} fontSize={40} colour="white"/>
-          <NavBarLink
-            text="Our Team"
-            widthPercent={90}
-            fontSize={40}
-            colour="white"
-          />
-          <NavBarLink
-            text="About"
-            widthPercent={90}
-            fontSize={40}
-            colour="white"
-          />
-          <NavBarLink
-            text="Contact"
-            widthPercent={90}
-            fontSize={40}
-            colour="white"
-          />
+          <div
+            onClick={() => {
+              setClicked((prev) => !prev);
+            }}
+          >
+            <NavBarLink
+              page="/"
+              text="Home"
+              widthPercent={90}
+              fontSize={40}
+              colour="white"
+            />
+          </div>
+          <div
+            onClick={() => {
+              setClicked((prev) => !prev);
+            }}
+          >
+            <NavBarLink
+              page="/our-team"
+              text="Our Team"
+              widthPercent={90}
+              fontSize={40}
+              colour="white"
+            />
+          </div>
+          <div
+            onClick={() => {
+              setClicked((prev) => !prev);
+            }}
+          >
+            <NavBarLink
+              page="/our-team"
+              text="About"
+              widthPercent={90}
+              fontSize={40}
+              colour="white"
+            />
+          </div>
+          <div
+            onClick={() => {
+              setClicked((prev) => !prev);
+            }}
+          >
+            <NavBarLink
+              page="/our-team"
+              text="Contact"
+              widthPercent={90}
+              fontSize={40}
+              colour="white"
+            />
+          </div>
         </div>
 
         {/* Footer accent */}

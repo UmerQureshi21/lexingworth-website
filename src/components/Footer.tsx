@@ -143,7 +143,7 @@ export default function Footer() {
               </h5>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/lexingworth/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FDBF57] hover:scale-110 transition-all duration-300"

@@ -151,8 +151,8 @@ export default function ExecutiveBoardSection() {
     {
       name: "Paul Lapinski",
       position: "Chief Operating Officer",
-      bio: "3rd year Economics student ",
-      image: "", //"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+      bio: "3rd year Honours Bachelor of Commerce @ McMaster",
+      image: "/exec_team/paul.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/paul-lapinski-05a05z/",
     },
     {
@@ -163,11 +163,39 @@ export default function ExecutiveBoardSection() {
       linkedinUrl: "https://www.linkedin.com/in/umer-qureshi06/",
     },
     {
+      name: "Allen Zhou",
+      position: "Chief Investment Officer",
+      bio: "5th year Honours Bachelor of Commerce @ McMaster",
+      image: "/exec_team/allen.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/allen-zhou-/",
+    },
+    {
       name: "Yajvin Bhutani",
       position: "Director of Events",
       bio: "4th year Computer Science @ McMaster",
       image: "/exec_team/yajvin.jpeg",
       linkedinUrl: "https://www.linkedin.com/in/yajvin-bhutani-696329237/",
+    },
+    {
+      name: "Avani Sharma",
+      position: "Director of Relations",
+      bio: "4th year Honours Bachelor of Commerce @ McMaster",
+      image: "/exec_team/avani.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/avanisharma01/",
+    },
+    {
+      name: "Yoshua Chettiar",
+      position: "Director of Marketing",
+      bio: "4th year Honours Bachelor of Commerce @ McMaster",
+      image: "/exec_team/yoshua.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/yoshchettiar/",
+    },
+    {
+      name: "Jaina Rama",
+      position: "Director of Events",
+      bio: "5th year Honours Bachelor of Commerce @ McMaster",
+      image: "/exec_team/jaina.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/jaina-rama/",
     },
   ];
 

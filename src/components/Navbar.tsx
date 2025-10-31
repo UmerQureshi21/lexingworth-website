@@ -17,10 +17,12 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed w-full border-b-[1px] border-b-black h-[75px] z-[500] bg-[#F4F1DE] flex items-center justify-between ">
-                {/* Logo Section */}
-                <div className={`flex items-center justify-around w-[250px] group
+        {/* Logo Section */}
+        <div
+          className={`flex items-center justify-around w-[250px] group
                         transition-all duration-700 delay-200
-                        `}>
+                        `}
+        >
           <div className="relative">
             <img
               src="/apple-touch-icon.png"
@@ -29,14 +31,18 @@ export default function Navbar() {
                          group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg"
             />
             {/* Glow effect on hover */}
-            <div className="absolute inset-0 rounded-lg bg-[#FDBF57]/0 group-hover:bg-[#FDBF57]/20 
-                            transition-all duration-300 blur-sm"></div>
+            <div
+              className="absolute inset-0 rounded-lg bg-[#FDBF57]/0 group-hover:bg-[#FDBF57]/20 
+                            transition-all duration-300 blur-sm"
+            ></div>
           </div>
           <h2 className="text-[30px] text-[#283618] font-bold relative overflow-hidden">
             Lexingworth
             {/* Animated underline */}
-            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FDBF57] 
-                           group-hover:w-full transition-all duration-500 ease-out"></span>
+            <span
+              className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FDBF57] 
+                           group-hover:w-full transition-all duration-500 ease-out"
+            ></span>
           </h2>
         </div>
         {clientWidth < 900 ? (
@@ -44,22 +50,28 @@ export default function Navbar() {
         ) : (
           <div className="w-[40%]  relative right-[20px] flex items-center justify-between">
             <NavBarLink
+              page="/"
               text="Home"
               widthPercent={20}
               fontSize={15}
               alignment="center"
+              colour="black"
             />
             <NavBarLink
+              page="/our-team"
               text="Our Team"
               widthPercent={20}
               fontSize={15}
               alignment="center"
+              colour="black"
             />
             <NavBarLink
+              page="/our-team"
               text="About"
               widthPercent={20}
               fontSize={15}
               alignment="center"
+              colour="black"
             />
             {/* Contact Button with sick animations */}
             <button
