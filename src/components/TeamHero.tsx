@@ -68,30 +68,7 @@ export default function TeamHero() {
 
 
 
-        {/* Scroll indicator */}
-        <div
-          className={`absolute bottom-8 transition-all duration-1000 ease-out delay-800
-                        ${isVisible ? "opacity-100" : "opacity-0"}`}
-        >
-          <div className="flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-white/60 text-sm uppercase tracking-wider">
-              Scroll to meet the team
-            </span>
-            <svg
-              className="w-6 h-6 text-white/60"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </div>
+
       </div>
     </div>
   );
