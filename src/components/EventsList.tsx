@@ -1,9 +1,21 @@
 import { useState } from "react";
 
+interface eventProps {
+  isSelected: boolean;
+  selectedEvent: number | null;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+  spots: string;
+  image: string;
+}
+
 export default function EventsList() {
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
 
-  const events = [
+  let events = [
     {
       id: 1,
       title: "Investment Banking Workshop",
@@ -71,6 +83,8 @@ export default function EventsList() {
     },
   ];
 
+  events = [];
+
   return (
     <section className="w-full bg-slate-50 py-12 md:py-20 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
@@ -80,7 +94,9 @@ export default function EventsList() {
           </h1>
           <div className="w-24 h-1 bg-[#FDBF57] mx-auto mb-6"></div>
           <p className="text-lg md:text-xl text-gray-600">
-            Click on any event to learn more
+            {events.length != 0
+              ? "Click on any event to learn more"
+              : "Events coming soon, stay tuned!"}
           </p>
         </div>
 
@@ -90,94 +106,147 @@ export default function EventsList() {
 
             return (
               <div
-                key={event.id}
                 onClick={() => setSelectedEvent(isSelected ? null : event.id)}
-                className={`
-                  bg-white rounded-xl shadow-md cursor-pointer
-                  transition-all duration-500 ease-in-out
-                  hover:shadow-xl border-2 border-transparent
-                  ${
-                    isSelected
-                      ? "scale-105 border-[#283618] shadow-2xl"
-                      : "hover:scale-[1.02] opacity-100"
-                  }
-                  ${selectedEvent && !isSelected ? "scale-95 opacity-60" : ""}
-                `}
               >
-                <div className="p-4 md:p-6 bg-[#F4F1DE]">
-                  <div className="flex flex-col sm:flex-row items-start gap-4">
-                    <div className="text-4xl md:text-5xl flex-shrink-0">
-                      {/* {event.emoji} */}
-                    </div>
-
-                    <div className="flex-1 w-full ">
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                        <h3 className="text-xl md:text-2xl font-bold text-[#283618]">
-                          {event.title}
-                        </h3>
-                        <span className="text-xs md:text-sm bg-[#283618] text-[#FDBF57] px-3 py-1 rounded-full font-semibold w-fit">
-                          {event.spots}
-                        </span>
-                      </div>
-
-                      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 text-sm md:text-base text-gray-700 mb-3">
-                        <span className="flex items-center gap-2">
-                          <svg className="w-5 h-5 text-[#283618] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"/>
-                          </svg>
-                          {event.date}
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <svg className="w-5 h-5 text-[#283618] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-                          </svg>
-                          {event.time}
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <svg className="w-5 h-5 text-[#283618] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                          </svg>
-                          {event.location}
-                        </span>
-                      </div>
-
-                      <div
-                        className={`
-                          overflow-hidden transition-all duration-500
-                          ${
-                            isSelected
-                              ? "max-h-[600px] opacity-100 mt-4"
-                              : "max-h-0 opacity-0"
-                          }
-                        `}
-                      >
-                        <div className="flex flex-col sm:flex-row gap-6 mb-6">
-                          <img
-                            src={event.image}
-                            alt={event.title}
-                            className="w-full sm:w-64 h-48 object-cover rounded-lg shadow-md"
-                          />
-                          <p className="text-sm md:text-base text-gray-700 leading-relaxed flex-1">
-                            {event.description}
-                          </p>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-3">
-                          <button className="bg-[#283618] hover:text-[#FDBF57] text-white px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base">
-                            Register Now
-                          </button>
-                          <button className="border-2 border-[#283618] text-[#283618] hover:bg-[#283618] hover:text-white px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base">
-                            Add to Calendar
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Event
+                  key={event.id}
+                  isSelected={isSelected}
+                  selectedEvent={selectedEvent}
+                  title={event.title}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                  description={event.description}
+                  spots={event.spots}
+                  image={event.image}
+                />
               </div>
             );
           })}
         </div>
       </div>
     </section>
+  );
+}
+
+export function Event({
+  isSelected,
+  selectedEvent,
+  title,
+  date,
+  time,
+  location,
+  description,
+  spots,
+  image,
+}: eventProps) {
+  return (
+    <div
+      className={`
+      bg-white rounded-xl shadow-md cursor-pointer
+      transition-all duration-500 ease-in-out
+      hover:shadow-xl border-2 border-transparent
+      ${
+        isSelected
+          ? "scale-105 border-[#283618] shadow-2xl"
+          : "hover:scale-[1.02] opacity-100"
+      }
+      ${selectedEvent && !isSelected ? "scale-95 opacity-60" : ""}
+    `}
+    >
+      <div className="p-4 md:p-6 bg-[#F4F1DE]">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
+          <div className="text-4xl md:text-5xl flex-shrink-0">
+            {/* {emoji} */}
+          </div>
+
+          <div className="flex-1 w-full ">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+              <h3 className="text-xl md:text-2xl font-bold text-[#283618]">
+                {title}
+              </h3>
+              <span className="text-xs md:text-sm bg-[#283618] text-[#FDBF57] px-3 py-1 rounded-full font-semibold w-fit">
+                {spots}
+              </span>
+            </div>
+
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 text-sm md:text-base text-gray-700 mb-3">
+              <span className="flex items-center gap-2">
+                <svg
+                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {date}
+              </span>
+              <span className="flex items-center gap-2">
+                <svg
+                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {time}
+              </span>
+              <span className="flex items-center gap-2">
+                <svg
+                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {location}
+              </span>
+            </div>
+
+            <div
+              className={`
+              overflow-hidden transition-all duration-500
+              ${
+                isSelected
+                  ? "max-h-[600px] opacity-100 mt-4"
+                  : "max-h-0 opacity-0"
+              }
+            `}
+            >
+              <div className="flex flex-col sm:flex-row gap-6 mb-6">
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full sm:w-64 h-48 object-cover rounded-lg shadow-md"
+                />
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed flex-1">
+                  {description}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button className="bg-[#283618] hover:text-[#FDBF57] text-white px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base">
+                  Register Now
+                </button>
+                <button className="border-2 border-[#283618] text-[#283618] hover:bg-[#283618] hover:text-white px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base">
+                  Add to Calendar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
