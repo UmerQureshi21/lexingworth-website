@@ -108,7 +108,6 @@ interface pastEventProps {
 }
 
 export function PastEvent({
-  id,
   isExpanded,
   onToggle,
   title,
