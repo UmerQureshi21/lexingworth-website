@@ -6,16 +6,21 @@ import {
 } from "react-router";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
-import OurTeam from "./pages/OurTeam";
 import PageNotFound from "./pages/PageNotFount";
 import PastEvents from "./pages/PastEvents";
+import OurTeamLayout from "./layouts/OurTeamLayout";
+import Executives from "./pages/Executives";
+import Analysts from "./pages/Analysts";
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="/our-team" element={<OurTeam />} />
+        <Route path="/our-team" element={<OurTeamLayout />}>
+          <Route path="execs" element={<Executives />} />
+          <Route path="analysts" element={<Analysts />} />
+        </Route>
         <Route path="/past-events" element={<PastEvents />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
