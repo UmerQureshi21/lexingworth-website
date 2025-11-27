@@ -26,7 +26,7 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle slides up and fades in with delay */}
-        <p
+        {/* <p
           className={`text-center text-[30px] text-white w-[90%]
                       transition-all duration-1000 ease-out delay-300
                       ${
@@ -35,12 +35,12 @@ export default function Hero() {
                           : "translate-y-20 opacity-0"
                       }`}
         >
-          Investment club at{" "}
+          Investment club at
           <span className="text-[#FDBF57]">McMaster University</span>
-        </p>
+        </p> */}
 
         {/* Button scales in and fades in with longest delay */}
-        <button
+        {/* <button
           className={`bg-[#283618] text-white text-[40px] w-[300px] rounded-[100px] h-[100px]
                            relative overflow-hidden group
                            transition-all duration-1000 ease-out delay-500
@@ -51,7 +51,7 @@ export default function Hero() {
                                : "scale-75 opacity-0"
                            }`}
         >
-          {/* Animated background on hover */}
+         
           <span
             className="absolute inset-0 bg-[#FDBF57] translate-x-[-100%] 
                          group-hover:translate-x-0 transition-transform duration-500"
@@ -59,7 +59,7 @@ export default function Hero() {
           <span className="relative z-10 group-hover:text-[#283618] transition-colors duration-300">
             Join us Now!
           </span>
-        </button>
+        </button> */}
       </div>
     </div>
   );
