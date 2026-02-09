@@ -6,8 +6,10 @@ export default function OurTeamLayout() {
   return (
     <div className="w-full">
       <TeamHero />
-      <TeamNavbar />
-      <Outlet />
+      <div className="min-h-screen bg-white">
+        <TeamNavbar />
+        <Outlet />
+      </div>
     </div>
   );
 }

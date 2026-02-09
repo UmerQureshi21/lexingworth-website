@@ -5,18 +5,18 @@ export default function Analysts() {
     {
       team: "Industrials / Infrastructure",
       people: [
-        { name: "Alex", position: "", bio: "", image: "", linkedinUrl: "" },
+        { name: "Alex", position: "", bio: "", image: "/analysts/alex.jpeg", linkedinUrl: "" },
         { name: "Noah", position: "", bio: "", image: "/analysts/noah.jpeg", linkedinUrl: "https://urldefense.com/v3/__http:/www.linkedin.com/in/noah-patel-821849221__;!!PxNGlQK5RbneE5k!VaLwXv01POPwrPD6BJctWboLqpxZcAfbyqWJtSe3X_vPt4zpoGnQJYeMqWvAKlmvv4u86P0E9MZL1kk0rn4gIRk$" },
-        { name: "Veer", position: "", bio: "", image: "/analysts/veer.heic", linkedinUrl: "" },
+        { name: "Veer", position: "", bio: "", image: "/analysts/veer.jpeg", linkedinUrl: "https://www.linkedin.com/in/veersarin/" },
         { name: "Nabeel", position: "", bio: "", image: "/analysts/nabeel.jpeg", linkedinUrl: "https://www.linkedin.com/in/nabeelbaigmirza/" },
-        { name: "James", position: "", bio: "", image: "", linkedinUrl: "https://www.linkedin.com/in/jaabraham/" },
+        { name: "James", position: "", bio: "", image: "/analysts/james.jpeg", linkedinUrl: "https://www.linkedin.com/in/jaabraham/" },
       ],
     },
     {
       team: "TMT (Tech, Media & Telecom)",
       people: [
-        { name: "Louise", position: "", bio: "", image: "", linkedinUrl: "" },
-        { name: "Alina", position: "", bio: "", image: "", linkedinUrl: "" },
+        { name: "Louise", position: "", bio: "", image: "/analysts/louise.jpeg", linkedinUrl: "" },
+        { name: "Alina", position: "", bio: "", image: "/analysts/alina.jpeg", linkedinUrl: "" },
         { name: "Angelo", position: "", bio: "", image: "/analysts/angelo.jpeg", linkedinUrl: "https://www.linkedin.com/in/angelovalentini/" },
         { name: "Gayathri", position: "", bio: "", image: "/analysts/gayathri.jpeg", linkedinUrl: "https://www.linkedin.com/in/gayathri-nunna/" },
       ],
@@ -24,9 +24,9 @@ export default function Analysts() {
     {
       team: "Healthcare",
       people: [
-        { name: "Viyashan", position: "", bio: "", image: "", linkedinUrl: "" },
-        { name: "Ammar", position: "", bio: "", image: "", linkedinUrl: "" },
-        { name: "Viraj", position: "", bio: "", image: "", linkedinUrl: "" },
+        { name: "Viyashan", position: "", bio: "", image: "/analysts/viyashan.jpeg", linkedinUrl: "" },
+        { name: "Ammar", position: "", bio: "", image: "/analysts/ammar.jpeg", linkedinUrl: "" },
+        { name: "Viraj", position: "", bio: "", image: "/analysts/viraj.jpeg", linkedinUrl: "https://www.linkedin.com/in/virajgulati06/" },
         { name: "Ayden", position: "", bio: "", image: "/analysts/ayden.jpeg", linkedinUrl: "https://www.linkedin.com/in/aydenbhanwadia/" },
         { name: "Evan", position: "", bio: "", image: "/analysts/evan.jpeg", linkedinUrl: "https://www.linkedin.com/in/evan-kwan05/" },
       ],
@@ -35,19 +35,19 @@ export default function Analysts() {
       team: "Energy / Oil & Gas",
       people: [
         { name: "Joshua", position: "", bio: "", image: "/analysts/joshua.jpeg", linkedinUrl: "https://www.linkedin.com/in/joshua-rebello/" },
-        { name: "Jelani", position: "", bio: "", image: "", linkedinUrl: "" },
-        { name: "Arpit", position: "", bio: "", image: "", linkedinUrl: "" },
-        { name: "Rienell", position: "", bio: "", image: "", linkedinUrl: "" },
+        { name: "Jelani", position: "", bio: "", image: "/analysts/jelani.jpeg", linkedinUrl: "www.linkedin.com/in/jelani-mossanda" },
+        { name: "Arpit", position: "", bio: "", image: "/analysts/arpit.jpeg", linkedinUrl: "" },
+        { name: "Rienell", position: "", bio: "", image: "/analysts/rienell.jpeg", linkedinUrl: "" },
       ],
     },
     {
       team: "Diversified",
       people: [
-        { name: "Laraib", position: "", bio: "", image: "", linkedinUrl: "" },
-        { name: "Lara", position: "", bio: "", image: "", linkedinUrl: "" },
+        { name: "Laraib", position: "", bio: "", image: "/analysts/laraib.jpeg", linkedinUrl: "www.linkedin.com/in/laraib-saleem/" },
+        { name: "Lara", position: "", bio: "", image: "/analysts/lara.jpeg", linkedinUrl: "" },
         { name: "Shrey", position: "", bio: "", image: "/analysts/shrey.jpeg", linkedinUrl: "http://linkedin.com/in/goelshrey" },
         { name: "Tylor", position: "", bio: "", image: "/analysts/tylor.jpeg", linkedinUrl: "https://www.linkedin.com/in/tylor-lu/" },
-        { name: "Yaiyin", position: "", bio: "", image: "", linkedinUrl: "" },
+        { name: "Yaiyin", position: "", bio: "", image: "/analysts/yaiyin.jpeg", linkedinUrl: "" },
       ],
     },
   ];

@@ -1,40 +1,37 @@
-import { useEffect, useState } from "react";
-import NavBarLink from "./NavBarLink";
+import { NavLink, useLocation } from "react-router";
 
 export default function TeamNavbar() {
-  const [clientWidth, setClientWidth] = useState<number>(window.innerWidth);
-
-  useEffect(() => {
-    function handleResize() {
-      setClientWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const location = useLocation();
+  const isAnalysts =
+    location.pathname === "/our-team" ||
+    location.pathname === "/our-team/analysts";
 
   return (
-    <>
-      <div className="h-[170px] bg-[#F4F1DE]">
-        <div className="w-full  relative right-[20px] gap-[50px] flex flex-col sm:flex-row items-center justify-center">
-          <NavBarLink
-            page="/our-team/analysts"
-            text="Analysts"
-            widthPercent={40}
-            fontSize={clientWidth >= 900 ? 100 : 30}
-            alignment="center"
-            colour="black"
-          />
-          <NavBarLink
-            page="/our-team/execs"
-            text="Executives"
-            widthPercent={40}
-            fontSize={clientWidth >= 900 ? 100 : 30}
-            alignment="center"
-            colour="black"
-          />
-        </div>
+    <div className="bg-white py-6">
+      <div className="flex items-center justify-center gap-12">
+        <NavLink
+          to="/our-team/analysts"
+          className={`text-2xl sm:text-3xl font-semibold tracking-wide transition-all duration-300 border-b-2 pb-1 ${
+            isAnalysts
+              ? "text-black border-black"
+              : "text-black/50 border-transparent hover:text-black hover:border-black/30"
+          }`}
+        >
+          Analysts
+        </NavLink>
+        <NavLink
+          to="/our-team/execs"
+          className={({ isActive }) =>
+            `text-2xl sm:text-3xl font-semibold tracking-wide transition-all duration-300 border-b-2 pb-1 ${
+              isActive
+                ? "text-black border-black"
+                : "text-black/50 border-transparent hover:text-black hover:border-black/30"
+            }`
+          }
+        >
+          Executives
+        </NavLink>
       </div>
-    </>
+    </div>
   );
 }

@@ -18,8 +18,9 @@ export default function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="/our-team" element={<OurTeamLayout />}>
-          <Route path="execs" element={<Executives />} />
+          <Route index element={<Analysts />} />
           <Route path="analysts" element={<Analysts />} />
+          <Route path="execs" element={<Executives />} />
         </Route>
         <Route path="/past-events" element={<PastEvents />} />
         <Route path="*" element={<PageNotFound />} />
