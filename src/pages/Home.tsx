@@ -7,11 +7,18 @@ import EventsList from "../components/EventsList";
 const descriptiveBoxes = [
   {
     title: "Who We Are",
-    des: "Lexingworth Capital is a student-run investment club founded in 2017 at McMaster University - DeGroote School of Business",
+    points: [
+      "Student-run investment club at McMaster University",
+      "Founded in 2017 at DeGroote School of Business",
+    ],
   },
   {
     title: "Our Vision",
-    des: "Our vision is to provide our members exclusive and hands on experience through exposure to the finance industry, active daily financial management, and participation in stock pitch competitions.",
+    points: [
+      "Hands-on exposure to the finance industry",
+      "Active daily financial management experience",
+      "Competitive stock pitch participation",
+    ],
   },
 ];
 
@@ -48,19 +55,19 @@ export default function Home() {
   return (
     <div className="w-full  relative top-[75px] flex flex-col justify-center items-center">
       <Hero />
-      <div className="flex bg-[#F4F1DE] flex-col items-center  lg:flex-row lg:justify-center  pb-[100px]">
+      <div className=" gap-[150px] flex  flex-col items-center lg:flex-row lg:justify-center pb-[100px]">
         {descriptiveBoxes.map((db, index) => (
           <DescriptiveBox
             key={index}
             title={db.title}
-            des={db.des}
+            points={db.points}
             textSize={60}
-            widthPercent={90 / descriptiveBoxes.length}
+            widthPercent={50 / descriptiveBoxes.length}
           />
         ))}
       </div>
       <div className="w-full bg-[#F4F1DE] flex flex-col items-center pb-[100px] px-6">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl pt-[100px] font-bold text-center mb-12">
           What do We Offer?
         </h1>
 
