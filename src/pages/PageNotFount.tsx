@@ -18,15 +18,15 @@ export default function PageNotFound() {
           className={`transition-all duration-1000 ease-out
                       `}
         >
-          <h1 className="text-[150px] sm:text-[200px] lg:text-[250px] font-bold text-[#283618] leading-none mb-4">
+          <h1 className="text-[150px] sm:text-[200px] lg:text-[250px] font-bold text-[var(--color-primary)] leading-none mb-4">
             404
           </h1>
-          <div className="w-32 h-1 bg-[#FDBF57] mx-auto mb-8"></div>
+          <div className="w-32 h-1 bg-[var(--color-accent)] mx-auto mb-8"></div>
         </div>
 
         {/* Title */}
         <h2
-          className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-[#283618] mb-6 transition-all duration-1000 ease-out delay-200
+          className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-primary)] mb-6 transition-all duration-1000 ease-out delay-200
                      `}
         >
           Page Not Found
@@ -38,7 +38,7 @@ export default function PageNotFound() {
                       `}
         >
           <div
-            className="bg-[#FDBF57] text-[#283618] px-8 py-4 rounded-full text-lg font-semibold
+            className="bg-[var(--color-accent)] text-[var(--color-primary)] px-8 py-4 rounded-full text-lg font-semibold
                      hover:bg-white hover:scale-110 transition-all duration-300 shadow-xl hover:shadow-2xl
                      relative overflow-hidden group"
           >
@@ -49,7 +49,7 @@ export default function PageNotFound() {
           </div>
 
           <p
-            className="bg-transparent border-2 border-white text-[#283618] px-8 py-4 rounded-full text-lg font-semibold
+            className="bg-transparent border-2 border-white text-[var(--color-primary)] px-8 py-4 rounded-full text-lg font-semibold
                      hover:bg-white hover:scale-110 transition-all duration-300 shadow-xl"
           >
             Contact Us
@@ -66,7 +66,7 @@ export default function PageNotFound() {
           <path
             d="M 0 0 L 200 50 L 400 30 L 600 100 L 800 80 L 1000 200"
             fill="none"
-            stroke="#FDBF57"
+            stroke="var(--color-accent)"
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"

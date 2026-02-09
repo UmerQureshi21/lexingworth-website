@@ -66,7 +66,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="w-full bg-[#F4F1DE] flex flex-col items-center pb-[100px] px-6">
+      <div className="w-full bg-[var(--color-cream)] flex flex-col items-center pb-[100px] px-6">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl pt-[100px] font-bold text-center mb-12">
           What do We Offer?
         </h1>
@@ -78,17 +78,17 @@ export default function Home() {
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-md border-2 border-transparent transition-all duration-300 hover:shadow-lg overflow-hidden"
-                style={isOpen ? { borderColor: "#FDBF57" } : {}}
+                style={isOpen ? { borderColor: "var(--color-accent)" } : {}}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer"
                 >
-                  <span className="text-xl sm:text-2xl font-semibold text-[#283618]">
+                  <span className="text-xl sm:text-2xl font-semibold text-[var(--color-primary)]">
                     {item.title}
                   </span>
                   <span
-                    className="text-2xl text-[#283618] transition-transform duration-300"
+                    className="text-2xl text-[var(--color-primary)] transition-transform duration-300"
                     style={isOpen ? { transform: "rotate(45deg)" } : {}}
                   >
                     +
@@ -104,7 +104,7 @@ export default function Home() {
                   <ul className="px-6 pb-5 flex flex-col gap-3">
                     {item.points.map((point, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="mt-1.5 w-2 h-2 rounded-full bg-[#FDBF57] shrink-0" />
+                        <span className="mt-1.5 w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0" />
                         <span className="text-gray-700">{point}</span>
                       </li>
                     ))}

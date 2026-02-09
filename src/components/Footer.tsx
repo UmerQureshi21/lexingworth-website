@@ -2,18 +2,18 @@ import { NavLink } from "react-router";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#283618] text-white pt-28 pb-8">
+    <footer className="bg-[var(--color-primary)] text-white pt-28 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Section with Quote */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 text-[#FDBF57]">
+            <h3 className="text-2xl font-bold mb-4 text-[var(--color-accent)]">
               Lexingworth Capital
             </h3>
             <div className="flex items-start gap-3 mb-6">
               <svg
-                className="w-12 h-12 text-[#FDBF57] flex-shrink-0"
+                className="w-12 h-12 text-[var(--color-accent)] flex-shrink-0"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function Footer() {
                   "The stock market is filled with individuals who know the
                   price of everything, but the value of nothing."
                 </p>
-                <p className="text-sm text-[#FDBF57] mt-2">— Philip Fisher</p>
+                <p className="text-sm text-[var(--color-accent)] mt-2">— Philip Fisher</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -58,14 +58,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-[#FDBF57]">
+            <h4 className="text-lg font-semibold mb-4 text-[var(--color-accent)]">
               Quick Links
             </h4>
             <ul className="space-y-3">
               <li>
                 <NavLink
                   to="/our-team"
-                  className="text-gray-300 hover:text-[#FDBF57] transition-colors duration-300"
+                  className="text-gray-300 hover:text-[var(--color-accent)] transition-colors duration-300"
                 >
                   Our Team
                 </NavLink>
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <NavLink
                   to="/past-events"
-                  className="text-gray-300 hover:text-[#FDBF57] transition-colors duration-300"
+                  className="text-gray-300 hover:text-[var(--color-accent)] transition-colors duration-300"
                 >
                   Past Events
                 </NavLink>
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Contact Us */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-[#FDBF57]">
+            <h4 className="text-lg font-semibold mb-4 text-[var(--color-accent)]">
               Contact Us
             </h4>
             <ul className="space-y-3 text-gray-300">
@@ -98,7 +98,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href="mailto:contact@lexingworth.com"
-                  className="hover:text-[#FDBF57] transition-colors duration-300 break-all"
+                  className="hover:text-[var(--color-accent)] transition-colors duration-300 break-all"
                 >
                   contact@lexingworth.com
                 </a>
@@ -131,7 +131,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href="tel:+19055251280"
-                  className="hover:text-[#FDBF57] transition-colors duration-300"
+                  className="hover:text-[var(--color-accent)] transition-colors duration-300"
                 >
                   (905) 525-1280
                 </a>
@@ -140,7 +140,7 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="mt-6">
-              <h5 className="text-sm font-semibold mb-3 text-[#FDBF57]">
+              <h5 className="text-sm font-semibold mb-3 text-[var(--color-accent)]">
                 Follow Us
               </h5>
               <div className="flex gap-4">
@@ -148,7 +148,7 @@ export default function Footer() {
                   href="https://www.instagram.com/lexingworth/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FDBF57] hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:scale-110 transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <svg
@@ -163,7 +163,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/lexingworth/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FDBF57] hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:scale-110 transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <svg
@@ -189,13 +189,13 @@ export default function Footer() {
             <div className="flex gap-6 text-sm">
               <a
                 href="#"
-                className="text-gray-400 hover:text-[#FDBF57] transition-colors duration-300"
+                className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-300"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-[#FDBF57] transition-colors duration-300"
+                className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-300"
               >
                 Terms of Service
               </a>

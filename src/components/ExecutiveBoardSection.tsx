@@ -52,9 +52,9 @@ export function ExecutiveBoardCard({
   return (
     <div
       ref={cardRef}
-      className={`bg-[#F4F1DE] rounded-2xl p-8 shadow-lg hover:shadow-2xl 
+      className={`bg-[var(--color-cream)] rounded-2xl p-8 shadow-lg hover:shadow-2xl 
                   transition-all duration-700 ease-out
-                  border-2 border-transparent hover:border-[#FDBF57]
+                  border-2 border-transparent hover:border-[var(--color-accent)]
                   group cursor-pointer
                   ${
                     isVisible
@@ -67,8 +67,8 @@ export function ExecutiveBoardCard({
         <div className="relative">
           {/* Image container */}
           <div
-            className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#283618] 
-                          transition-all duration-500 group-hover:scale-110 group-hover:border-[#FDBF57]
+            className="w-48 h-48 rounded-full overflow-hidden border-4 border-[var(--color-primary)] 
+                          transition-all duration-500 group-hover:scale-110 group-hover:border-[var(--color-accent)]
                           shadow-xl"
           >
             <img
@@ -80,7 +80,7 @@ export function ExecutiveBoardCard({
 
           {/* Glow effect on hover */}
           <div
-            className="absolute inset-0 rounded-full bg-[#FDBF57]/0 group-hover:bg-[#FDBF57]/20 
+            className="absolute inset-0 rounded-full bg-[var(--color-accent)]/0 group-hover:bg-[var(--color-accent)]/20 
                           transition-all duration-500 blur-xl"
           ></div>
 
@@ -89,10 +89,10 @@ export function ExecutiveBoardCard({
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute bottom-2 right-2 w-12 h-12 bg-[#283618] rounded-full 
+            className="absolute bottom-2 right-2 w-12 h-12 bg-[var(--color-primary)] rounded-full 
                        flex items-center justify-center
                        opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100
-                       transition-all duration-300 hover:bg-[#FDBF57] z-10"
+                       transition-all duration-300 hover:bg-[var(--color-accent)] z-10"
             onClick={(e) => e.stopPropagation()}
           >
             <svg
@@ -110,8 +110,8 @@ export function ExecutiveBoardCard({
       <div className="text-center">
         {/* Name */}
         <h3
-          className="text-3xl font-bold text-[#283618] mb-2 
-                       group-hover:text-[#FDBF57] transition-colors duration-300"
+          className="text-3xl font-bold text-[var(--color-primary)] mb-2 
+                       group-hover:text-[var(--color-accent)] transition-colors duration-300"
         >
           {name}
         </h3>
@@ -119,9 +119,9 @@ export function ExecutiveBoardCard({
         {/* Position */}
         <div className="mb-4">
           <span
-            className="inline-block bg-[#283618] text-[#FDBF57] px-4 py-1 rounded-full 
+            className="inline-block bg-[var(--color-primary)] text-[var(--color-accent)] px-4 py-1 rounded-full 
                          text-sm font-semibold uppercase tracking-wider
-                         group-hover:bg-[#FDBF57] group-hover:text-[#283618]
+                         group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)]
                          transition-all duration-300"
           >
             {position}
@@ -134,7 +134,7 @@ export function ExecutiveBoardCard({
 
       {/* Decorative element at bottom */}
       <div className="mt-6 flex justify-center">
-        <div className="w-0 h-1 bg-[#FDBF57] group-hover:w-24 transition-all duration-500"></div>
+        <div className="w-0 h-1 bg-[var(--color-accent)] group-hover:w-24 transition-all duration-500"></div>
       </div>
     </div>
   );
@@ -176,9 +176,9 @@ export function CEOCard({
   return (
     <div
       ref={cardRef}
-      className={`bg-[#F4F1DE] rounded-3xl p-8 md:p-12 shadow-2xl 
+      className={`bg-[var(--color-cream)] rounded-3xl p-8 md:p-12 shadow-2xl 
                   transition-all duration-700 ease-out w-full
-                  border-2 border-transparent hover:border-[#FDBF57]
+                  border-2 border-transparent hover:border-[var(--color-accent)]
                   group cursor-pointer relative overflow-hidden
                   ${
                     isVisible
@@ -187,7 +187,7 @@ export function CEOCard({
                   }`}
     >
       {/* Decorative gradient overlay */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#FDBF57]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[var(--color-accent)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 relative z-10">
         {/* Photo Section */}
@@ -195,9 +195,9 @@ export function CEOCard({
           <div className="relative">
             {/* Image container */}
             <div
-              className="w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#283618] 
-                          transition-all duration-500 group-hover:scale-105 group-hover:border-[#FDBF57]
-                          shadow-2xl group-hover:shadow-[0_20px_60px_rgba(253,191,87,0.3)]"
+              className="w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[var(--color-primary)] 
+                          transition-all duration-500 group-hover:scale-105 group-hover:border-[var(--color-accent)]
+                          shadow-2xl group-hover:shadow-[0_20px_60px_color-mix(in srgb, var(--color-accent) 30%, transparent)]"
             >
               <img
                 src={image}
@@ -208,7 +208,7 @@ export function CEOCard({
 
             {/* Glow effect on hover */}
             <div
-              className="absolute inset-0 rounded-2xl bg-[#FDBF57]/0 group-hover:bg-[#FDBF57]/20 
+              className="absolute inset-0 rounded-2xl bg-[var(--color-accent)]/0 group-hover:bg-[var(--color-accent)]/20 
                           transition-all duration-500 blur-2xl"
             ></div>
 
@@ -217,10 +217,10 @@ export function CEOCard({
               href={linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute bottom-4 right-4 w-14 h-14 bg-[#283618] rounded-full 
+              className="absolute bottom-4 right-4 w-14 h-14 bg-[var(--color-primary)] rounded-full 
                          flex items-center justify-center
                          opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100
-                         transition-all duration-300 hover:bg-[#FDBF57] z-10
+                         transition-all duration-300 hover:bg-[var(--color-accent)] z-10
                          shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
@@ -240,9 +240,9 @@ export function CEOCard({
           {/* Position badge */}
           <div className="mb-3">
             <span
-              className="inline-flex items-center gap-2 bg-[#283618] text-[#FDBF57] px-5 py-2 rounded-full 
+              className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-[var(--color-accent)] px-5 py-2 rounded-full 
                          text-sm font-bold uppercase tracking-widest
-                         group-hover:bg-[#FDBF57] group-hover:text-[#283618]
+                         group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)]
                          transition-all duration-300 shadow-lg"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -254,15 +254,15 @@ export function CEOCard({
 
           {/* Name */}
           <h3
-            className="text-4xl lg:text-5xl font-bold text-[#283618] mb-4
-                       group-hover:text-[#FDBF57] transition-colors duration-300"
+            className="text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-4
+                       group-hover:text-[var(--color-accent)] transition-colors duration-300"
           >
             {name}
           </h3>
 
           {/* Decorative line */}
           <div className="flex justify-center lg:justify-start mb-6">
-            <div className="w-24 h-1 bg-[#283618] group-hover:w-40 group-hover:bg-[#FDBF57] transition-all duration-500"></div>
+            <div className="w-24 h-1 bg-[var(--color-primary)] group-hover:w-40 group-hover:bg-[var(--color-accent)] transition-all duration-500"></div>
           </div>
 
           {/* Bio */}
@@ -273,14 +273,14 @@ export function CEOCard({
           {/* Achievements/Highlights (if provided) */}
           {achievements.length > 0 && (
             <div className="mt-6">
-              <h4 className="text-sm font-semibold text-[#283618] mb-3 uppercase tracking-wider">
+              <h4 className="text-sm font-semibold text-[var(--color-primary)] mb-3 uppercase tracking-wider">
                 Key Achievements
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {achievements.map((achievement, index) => (
                   <div key={index} className="flex items-start gap-2 text-left">
                     <svg
-                      className="w-5 h-5 text-[#FDBF57] flex-shrink-0 mt-0.5"
+                      className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -377,10 +377,10 @@ export default function ExecutiveBoardSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         {/* <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-[#283618] mb-4">
+          <h2 className="text-5xl font-bold text-[var(--color-primary)] mb-4">
             Executive Board
           </h2>
-          <div className="w-24 h-1 bg-[#FDBF57] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[var(--color-accent)] mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Meet the leaders driving Lexingworth Capital forward
           </p>

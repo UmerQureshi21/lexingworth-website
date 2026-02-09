@@ -47,7 +47,7 @@ export default function PopUp() {
   return (
     <>
       <div
-        className="fixed right-0 z-[60] transition-all duration-500 ease-in-out bg-[#283618] flex flex-col items-center overflow-y-auto"
+        className="fixed right-0 z-[60] transition-all duration-500 ease-in-out bg-[var(--color-primary)] flex flex-col items-center overflow-y-auto"
         style={{
           height: `${clientHeight}px`,
           top: `${0}px`,
@@ -73,11 +73,11 @@ export default function PopUp() {
 
         <div className="w-[90%] relative z-10 mt-20">
           <div className="mb-8">
-            <div className="w-16 h-1 bg-[#FDBF57] mb-4"></div>
+            <div className="w-16 h-1 bg-[var(--color-accent)] mb-4"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Navigate Your
               <br />
-              <span className="text-[#FDBF57]">Financial Future</span>
+              <span className="text-[var(--color-accent)]">Financial Future</span>
             </h2>
           </div>
         </div>

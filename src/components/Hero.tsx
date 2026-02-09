@@ -36,12 +36,12 @@ export default function Hero() {
                       }`}
         >
           Investment club at
-          <span className="text-[#FDBF57]">McMaster University</span>
+          <span className="text-[var(--color-accent)]">McMaster University</span>
         </p> */}
 
         {/* Button scales in and fades in with longest delay */}
         {/* <button
-          className={`bg-[#283618] text-white text-[40px] w-[300px] rounded-[100px] h-[100px]
+          className={`bg-[var(--color-primary)] text-white text-[40px] w-[300px] rounded-[100px] h-[100px]
                            relative overflow-hidden group
                            transition-all duration-1000 ease-out delay-500
                            hover:scale-110 hover:shadow-2xl
@@ -53,10 +53,10 @@ export default function Hero() {
         >
          
           <span
-            className="absolute inset-0 bg-[#FDBF57] translate-x-[-100%] 
+            className="absolute inset-0 bg-[var(--color-accent)] translate-x-[-100%] 
                          group-hover:translate-x-0 transition-transform duration-500"
           ></span>
-          <span className="relative z-10 group-hover:text-[#283618] transition-colors duration-300">
+          <span className="relative z-10 group-hover:text-[var(--color-primary)] transition-colors duration-300">
             Join us Now!
           </span>
         </button> */}

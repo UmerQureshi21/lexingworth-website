@@ -26,8 +26,8 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <div className="relative bg-[#F4F1DE] w-full flex flex-col items-center pb-[150px]  pt-[50px] sm:pt-[100px]">
-      <h1 className="w-full text-center text-[70px] text-[#283618] font-bold">
+    <div className="relative bg-white w-full flex flex-col items-center pb-[150px]  pt-[50px] sm:pt-[100px]">
+      <h1 className="w-full text-center text-[70px] text-[var(--color-primary)] font-bold">
         FAQs
       </h1>
       <div className="flex flex-col w-[80%] items-center justify-center items-center mt-[35px] border-b-[1px] pb-[20px] border-b-[rgba(0,0,0,0.2)]">

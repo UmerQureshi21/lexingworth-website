@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed w-full border-b-[1px] border-b-black h-[75px] z-[500] bg-[#F4F1DE] flex items-center justify-between ">
+      <div className="fixed w-full border-b-[1px] border-b-black h-[75px] z-[500] bg-[var(--color-cream)] flex items-center justify-between ">
         {/* Logo Section */}
         <div
           className={`flex items-center justify-around w-[250px] group
@@ -33,15 +33,15 @@ export default function Navbar() {
             />
             {/* Glow effect on hover */}
             <div
-              className="absolute inset-0 rounded-lg bg-[#FDBF57]/0 group-hover:bg-[#FDBF57]/20 
+              className="absolute inset-0 rounded-lg bg-[var(--color-accent)]/0 group-hover:bg-[var(--color-accent)]/20 
                             transition-all duration-300 blur-sm"
             ></div>
           </NavLink>
-          <h2 className="text-[30px] text-[#283618] font-bold relative overflow-hidden">
+          <h2 className="text-[30px] text-[var(--color-primary)] font-bold relative overflow-hidden">
             Lexingworth
             {/* Animated underline */}
             <span
-              className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FDBF57] 
+              className="absolute bottom-0 left-0 w-0 h-[2px] bg-[var(--color-accent)] 
                            group-hover:w-full transition-all duration-500 ease-out"
             ></span>
           </h2>
@@ -76,18 +76,18 @@ export default function Navbar() {
             />
             {/* Contact Button with sick animations */}
             <button
-              className="bg-[#283618] text-white h-[40px] w-[20%] rounded-[20px] 
+              className="bg-[var(--color-primary)] text-white h-[40px] w-[20%] rounded-[20px] 
                              hover:cursor-pointer relative overflow-hidden group/btn
                              transition-all duration-300 hover:scale-105 hover:shadow-xl
-                             border-2 border-[#283618] hover:border-[#FDBF57]"
+                             border-2 border-[var(--color-primary)] hover:border-[var(--color-accent)]"
             >
               {/* Sliding background effect */}
               <span
-                className="absolute inset-0 bg-[#FDBF57] translate-y-full 
+                className="absolute inset-0 bg-[var(--color-accent)] translate-y-full 
                              group-hover/btn:translate-y-0 transition-transform duration-300"
               ></span>
               <span
-                className="relative z-10 font-semibold group-hover/btn:text-[#283618] 
+                className="relative z-10 font-semibold group-hover/btn:text-[var(--color-primary)] 
                              transition-colors duration-300"
               >
                 Contact

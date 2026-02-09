@@ -86,13 +86,13 @@ export default function EventsList() {
   events = [];
 
   return (
-    <section className="w-full bg-slate-50 py-12 md:py-20 px-4 md:px-6">
+    <section className="w-full  py-12 md:py-20 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12">
-          <h1 className="text-[60px] md:text-5xl font-bold text-[#283618] mb-4">
+          <h1 className="text-[60px] md:text-5xl font-bold text-[var(--color-primary)] mb-4">
             Upcoming Events
           </h1>
-          <div className="w-24 h-1 bg-[#FDBF57] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[var(--color-accent)] mx-auto mb-6"></div>
           <p className="text-lg md:text-xl text-gray-600">
             {events.length != 0
               ? "Click on any event to learn more"
@@ -148,13 +148,13 @@ export function Event({
       hover:shadow-xl border-2 border-transparent
       ${
         isSelected
-          ? "scale-105 border-[#283618] shadow-2xl"
+          ? "scale-105 border-[var(--color-primary)] shadow-2xl"
           : "hover:scale-[1.02] opacity-100"
       }
       ${selectedEvent && !isSelected ? "scale-95 opacity-60" : ""}
     `}
     >
-      <div className="p-4 md:p-6 bg-[#F4F1DE]">
+      <div className="p-4 md:p-6 bg-[var(--color-cream)]">
         <div className="flex flex-col sm:flex-row items-start gap-4">
           <div className="text-4xl md:text-5xl flex-shrink-0">
             {/* {emoji} */}
@@ -162,10 +162,10 @@ export function Event({
 
           <div className="flex-1 w-full ">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-              <h3 className="text-xl md:text-2xl font-bold text-[#283618]">
+              <h3 className="text-xl md:text-2xl font-bold text-[var(--color-primary)]">
                 {title}
               </h3>
-              <span className="text-xs md:text-sm bg-[#283618] text-[#FDBF57] px-3 py-1 rounded-full font-semibold w-fit">
+              <span className="text-xs md:text-sm bg-[var(--color-primary)] text-[var(--color-accent)] px-3 py-1 rounded-full font-semibold w-fit">
                 {spots}
               </span>
             </div>
@@ -173,7 +173,7 @@ export function Event({
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 text-sm md:text-base text-gray-700 mb-3">
               <span className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -187,7 +187,7 @@ export function Event({
               </span>
               <span className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -201,7 +201,7 @@ export function Event({
               </span>
               <span className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -236,10 +236,10 @@ export function Event({
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-[#283618] hover:text-[#FDBF57] text-white px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base">
+                <button className="bg-[var(--color-primary)] hover:text-[var(--color-accent)] text-white px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base">
                   Register Now
                 </button>
-                <button className="border-2 border-[#283618] text-[#283618] hover:bg-[#283618] hover:text-white px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base">
+                <button className="border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base">
                   Add to Calendar
                 </button>
               </div>

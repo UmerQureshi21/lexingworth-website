@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
 
+:root {
+  --color-primary: #283618;
+  --color-accent: #FDBF57;
+  --color-cream: #F4F1DE;
+}
+
 * {
 
   box-sizing: border-box;
@@ -38,7 +44,7 @@ h1 {
   height: 2px;
   top: 20px;
   right: 0;
-  background-color: #283618;
+  background-color: var(--color-primary);
 }
 
 .faq-question::after {
@@ -48,7 +54,7 @@ h1 {
   height: 30px;
   top: 6px;
   right: 14px;
-  background-color: #283618;
+  background-color: var(--color-primary);
   transition: transform 0.5s ease;
 }
 

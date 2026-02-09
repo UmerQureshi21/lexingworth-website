@@ -52,7 +52,7 @@ export default function PastEvents() {
       <div className="pt-[75px] px-4 md:px-8 lg:px-16">
         <div className="flex flex-col items-center py-12">
           <p className="text-4xl md:text-[50px] text-center">
-            <span className="text-[#283618] font-bold">Lexingworth</span> has
+            <span className="text-[var(--color-primary)] font-bold">Lexingworth</span> has
             been fortunate enough to have many great events with ambitious
             students coming to learn!
           </p>
@@ -128,11 +128,11 @@ export function PastEvent({
       transition-all duration-500 ease-in-out
       hover:shadow-xl border-2 border-transparent
       flex flex-col h-full
-      ${isExpanded ? "border-[#283618] shadow-2xl" : "hover:scale-[1.02]"}
+      ${isExpanded ? "border-[var(--color-primary)] shadow-2xl" : "hover:scale-[1.02]"}
     `}
       onClick={onToggle}
     >
-      <div className="p-4 md:p-6 bg-[#F4F1DE] flex flex-col h-full">
+      <div className="p-4 md:p-6 bg-[var(--color-cream)] flex flex-col h-full">
         <div className="flex flex-col gap-4 flex-1">
           <img
             src={image}
@@ -142,10 +142,10 @@ export function PastEvent({
 
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-              <h3 className="text-xl md:text-2xl font-bold text-[#283618]">
+              <h3 className="text-xl md:text-2xl font-bold text-[var(--color-primary)]">
                 {title}
               </h3>
-              <span className="text-xs md:text-sm bg-[#283618] text-[#FDBF57] px-3 py-1 rounded-full font-semibold w-fit">
+              <span className="text-xs md:text-sm bg-[var(--color-primary)] text-[var(--color-accent)] px-3 py-1 rounded-full font-semibold w-fit">
                 {attendance} attended
               </span>
             </div>
@@ -153,7 +153,7 @@ export function PastEvent({
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 text-sm md:text-base text-gray-700 mb-3">
               <span className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -167,7 +167,7 @@ export function PastEvent({
               </span>
               <span className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#283618] flex-shrink-0"
+                  className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -191,8 +191,8 @@ export function PastEvent({
               ${isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
             `}
             >
-              <div className="pt-4 border-t-2 border-[#283618] border-opacity-20">
-                <h4 className="font-bold text-[#283618] mb-3">
+              <div className="pt-4 border-t-2 border-[var(--color-primary)] border-opacity-20">
+                <h4 className="font-bold text-[var(--color-primary)] mb-3">
                   Event Highlights
                 </h4>
                 <ul className="space-y-2 mb-4">
@@ -201,7 +201,7 @@ export function PastEvent({
                       key={idx}
                       className="text-sm md:text-base text-gray-700 flex items-start gap-3"
                     >
-                      <span className="text-[#283618] font-bold mt-1">✓</span>
+                      <span className="text-[var(--color-primary)] font-bold mt-1">✓</span>
                       {highlight}
                     </li>
                   ))}
@@ -219,8 +219,8 @@ export function PastEvent({
               }
             `}
             >
-              <div className="border-t-2 border-[#283618] border-opacity-20 pt-4">
-                <h4 className="font-bold text-[#283618] mb-4">Event Photos</h4>
+              <div className="border-t-2 border-[var(--color-primary)] border-opacity-20 pt-4">
+                <h4 className="font-bold text-[var(--color-primary)] mb-4">Event Photos</h4>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {photos?.map((photo, idx) => (
                     <img
@@ -236,18 +236,18 @@ export function PastEvent({
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-4 border-t-2 border-[#283618] border-opacity-20 pt-4">
+        <div className="flex justify-between items-center mt-4 border-t-2 border-[var(--color-primary)] border-opacity-20 pt-4">
           <button
             onClick={(e) => {
               e.stopPropagation();
               onPhotosToggle();
             }}
-            className="text-[#283618] hover:text-[#FDBF57] font-semibold text-sm md:text-base transition-colors"
+            className="text-[var(--color-primary)] hover:text-[var(--color-accent)] font-semibold text-sm md:text-base transition-colors"
           >
             View Photos
           </button>
           <svg
-            className={`w-5 h-5 text-[#283618] transition-transform duration-500 ${
+            className={`w-5 h-5 text-[var(--color-primary)] transition-transform duration-500 ${
               isExpanded ? "rotate-180" : ""
             }`}
             fill="none"

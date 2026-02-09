@@ -14,7 +14,7 @@ export default function TeamHero() {
 
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-[#FDBF57] rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-[var(--color-accent)] rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
       </div>
 
@@ -30,7 +30,7 @@ export default function TeamHero() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full gap-6 px-6">
         {/* Small accent line */}
         <div
-          className={`w-20 h-1 bg-[#FDBF57] transition-all duration-1000 ease-out
+          className={`w-20 h-1 bg-[var(--color-accent)] transition-all duration-1000 ease-out
                         ${
                           isVisible
                             ? "scale-x-100 opacity-100"
@@ -48,7 +48,7 @@ export default function TeamHero() {
                            : "translate-y-20 opacity-0"
                        }`}
         >
-          Meet the <span className="text-[#FDBF57]">Team</span> Behind
+          Meet the <span className="text-[var(--color-accent)]">Team</span> Behind
           <br />
           Lexingworth
         </h1>
