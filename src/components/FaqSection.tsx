@@ -4,23 +4,27 @@ const faqs = [
   {
     question: "What qualities or skills are you looking for?",
     answer:
-      "No. We review and accept applicants (with or without a startup idea).",
+      "We look for students who are curious about markets, willing to learn, and committed to improving their analytical thinking. Prior finance experience is not required, discipline, curiosity, and a strong work ethic matter most.",
   },
   {
     question: "How does the club help me achieve my goals?",
-    answer: "We will review candidates on a rolling basis. Earlier is better!",
+    answer:
+      "Lexingworth provides hands-on investment experience, mentorship, technical training, and exposure to industry professionals. Members build real skills in research, financial modeling, and pitching ideas—preparing them for careers in finance and investing.",
   },
   {
     question: "What exactly will I learn about investing?",
-    answer: "We will review candidates on a rolling basis. Earlier is better!",
+    answer:
+      "Members learn how to analyze companies, understand financial statements, evaluate industries, build valuation models, and present investment theses. The focus is on practical, real-world investing skills.",
   },
   {
     question: "Do I have to attend McMaster in order to join?",
-    answer: "We will review candidates on a rolling basis. Earlier is better!",
+    answer:
+      "While most of our members are McMaster students, we welcome passionate individuals from other universities who are serious about learning investing and contributing to the community.",
   },
   {
     question: "When should I apply?",
-    answer: "We will review candidates on a rolling basis. Earlier is better!",
+    answer:
+      "Applications typically open at the beginning of each academic term. We encourage interested candidates to apply early and stay connected with our updates",
   },
 ];
 
