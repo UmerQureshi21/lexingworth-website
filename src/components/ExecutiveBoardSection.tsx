@@ -6,6 +6,7 @@ interface ExecutiveBoardCardProps {
   bio: string;
   image: string;
   linkedinUrl: string;
+  bg: string;
 }
 
 interface CEOCardProps {
@@ -23,6 +24,7 @@ export function ExecutiveBoardCard({
   bio,
   image,
   linkedinUrl,
+  bg,
 }: ExecutiveBoardCardProps) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -35,7 +37,7 @@ export function ExecutiveBoardCard({
       {
         threshold: 0.2,
         rootMargin: "0px",
-      }
+      },
     );
 
     if (cardRef.current) {
@@ -52,7 +54,7 @@ export function ExecutiveBoardCard({
   return (
     <div
       ref={cardRef}
-      className={`bg-[var(--color-cream)] rounded-2xl p-8 shadow-lg hover:shadow-2xl 
+      className={`bg-${bg} rounded-2xl p-8 shadow-lg hover:shadow-2xl 
                   transition-all duration-700 ease-out
                   border-2 border-transparent hover:border-[var(--color-accent)]
                   group cursor-pointer
@@ -159,7 +161,7 @@ export function CEOCard({
       {
         threshold: 0.2,
         rootMargin: "0px",
-      }
+      },
     );
 
     if (cardRef.current) {
@@ -411,6 +413,7 @@ export default function ExecutiveBoardSection() {
               bio={exec.bio}
               image={exec.image}
               linkedinUrl={exec.linkedinUrl}
+              bg={"[var(--color-cream)]"}
             />
           ))}
         </div>

@@ -1,6 +1,21 @@
+import { useState } from "react";
 import { ExecutiveBoardCard } from "../components/ExecutiveBoardSection";
 
 export default function Analysts() {
+  const [openTeams, setOpenTeams] = useState<Set<number>>(new Set());
+
+  const toggleTeam = (idx: number) => {
+    setOpenTeams((prev) => {
+      const next = new Set(prev);
+      if (next.has(idx)) {
+        next.delete(idx);
+      } else {
+        next.add(idx);
+      }
+      return next;
+    });
+  };
+
   const coverageTeams = [
     {
       team: "Industrials / Infrastructure",
@@ -185,29 +200,78 @@ export default function Analysts() {
   ];
 
   return (
-    <div className="w-full pb-[100px] relative top-[75px] flex flex-col justify-center items-center">
-      {coverageTeams.map((coverage, idx) => (
-        <div key={idx} className="w-full mb-12 flex flex-col items-center">
-          <h2 className="text-2xl font-bold mb-6 text-center px-6">
-            {coverage.team}
-          </h2>
-          <div className="w-full md:w-auto px-6 md:px-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-              {coverage.people.map((person, personIdx) => (
-                <div key={personIdx} className="w-[70%] md:w-auto">
-                  <ExecutiveBoardCard
-                    name={person.name}
-                    position={person.position}
-                    bio={person.bio}
-                    image={person.image}
-                    linkedinUrl={person.linkedinUrl}
-                  />
+    <div className="w-full pb-[100px] relative top-[75px] flex flex-col items-center px-4 md:px-8">
+      <div className="w-full max-w-5xl flex flex-col gap-4">
+        {coverageTeams.map((coverage, idx) => {
+          const isOpen = openTeams.has(idx);
+          return (
+            <div
+              key={idx}
+              className="w-full rounded-2xl border-2 border-[var(--color-primary)]/20 bg-[var(--color-cream)] shadow-md overflow-hidden"
+            >
+              {/* Accordion Header */}
+              <button
+                onClick={() => toggleTeam(idx)}
+                className="w-full flex items-center justify-between px-6 py-5 md:px-8 md:py-6 cursor-pointer
+                           hover:bg-[var(--color-primary)]/5 transition-colors duration-200"
+              >
+                <h2 className="text-xl md:text-2xl font-bold text-[var(--color-primary)]">
+                  {coverage.team}
+                </h2>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-gray-500 font-medium">
+                    {coverage.people.length} members
+                  </span>
+                  <svg
+                    className={`w-6 h-6 text-[var(--color-primary)] transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
-              ))}
+              </button>
+
+              {/* Accordion Content */}
+              <div
+                className={`grid transition-all duration-300 ease-in-out ${
+                  isOpen
+                    ? "grid-rows-[1fr] opacity-100"
+                    : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <div className="px-4 pb-6 md:px-8 md:pb-8 pt-2">
+                    <div className="w-full h-px bg-[var(--color-primary)]/10 mb-6"></div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                      {coverage.people.map((person, personIdx) => (
+                        <div key={personIdx} className="w-full max-w-[280px]">
+                          <ExecutiveBoardCard
+                            name={person.name}
+                            position={person.position}
+                            bio={person.bio}
+                            image={person.image}
+                            linkedinUrl={person.linkedinUrl}
+                            bg="[white]"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
+          );
+        })}
+      </div>
     </div>
   );
 }
