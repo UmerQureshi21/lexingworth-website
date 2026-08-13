@@ -17,92 +17,59 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed w-full border-b-[1px] border-b-black h-[75px] z-[500] bg-[var(--color-cream)] flex items-center justify-between ">
+      <div className="fixed w-full h-[75px] z-[500] flex items-center justify-between ">
         {/* Logo Section */}
-        <div
-          className={`flex items-center justify-around w-[250px] group
-                        transition-all duration-700 delay-200
-                        `}
-        >
-          <NavLink className="relative" to={"/"}>
-            <img
-              src="/apple-touch-icon.png"
-              alt=""
-              className="w-[45px] h-[45px] border-[0.5px] rounded-lg transition-all duration-300 
-                         group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg"
-            />
-            {/* Glow effect on hover */}
-            <div
-              className="absolute inset-0 rounded-lg bg-[var(--color-accent)]/0 group-hover:bg-[var(--color-accent)]/20 
-                            transition-all duration-300 blur-sm"
-            ></div>
-          </NavLink>
-          <h2 className="text-[30px] text-[var(--color-primary)] font-bold relative overflow-hidden">
-            Lexingworth
-            {/* Animated underline */}
-            <span
-              className="absolute bottom-0 left-0 w-0 h-[2px] bg-[var(--color-accent)] 
-                           group-hover:w-full transition-all duration-500 ease-out"
-            ></span>
-          </h2>
-        </div>
+        <NavLink to={"/home"} className="group ml-4">
+          <img
+            src="/lexingworth-logo.png"
+            alt="Lexingworth Capital"
+            className="h-[36px] w-auto object-contain brightness-0 invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-105"
+          />
+        </NavLink>
         {clientWidth < 1100 ? (
           <PopUp />
         ) : (
-          <div className="w-[440px] mr-6 flex items-center justify-between">
+          <div className="w-[400px] mr-6 flex items-center justify-between">
             <NavBarLink
-              page="/"
-              text="About"
-              widthPercent={17}
+              page="/home"
+              text="Home"
+              widthPercent={18}
               fontSize={14}
               alignment="center"
-              colour="black"
+              colour="white"
+            />
+            <NavBarLink
+              page="/about"
+              text="About"
+              widthPercent={18}
+              fontSize={14}
+              alignment="center"
+              colour="white"
             />
             <NavBarLink
               page="/events"
               text="Events"
-              widthPercent={17}
+              widthPercent={18}
               fontSize={14}
               alignment="center"
-              colour="black"
+              colour="white"
             />
             <NavBarLink
               page="/fund"
               text="Fund"
-              widthPercent={17}
+              widthPercent={18}
               fontSize={14}
               alignment="center"
-              colour="black"
+              colour="white"
             />
             <NavBarLink
               page="/join"
               text="Join"
-              widthPercent={17}
+              widthPercent={18}
               fontSize={14}
               alignment="center"
-              colour="black"
+              colour="white"
             />
-            {/* Contact Button with sick animations */}
-            <NavLink
-              to="/contact"
-              className="bg-[var(--color-primary)] text-white h-[40px] w-[100px] rounded-[20px]
-                             flex items-center justify-center
-                             relative overflow-hidden group/btn
-                             transition-all duration-300 hover:scale-105 hover:shadow-xl
-                             border-2 border-[var(--color-primary)] hover:border-[var(--color-accent)]"
-            >
-              {/* Sliding background effect */}
-              <span
-                className="absolute inset-0 bg-[var(--color-accent)] translate-y-full
-                             group-hover/btn:translate-y-0 transition-transform duration-300"
-              ></span>
-              <span
-                className="relative z-10 font-semibold group-hover/btn:text-[var(--color-primary)]
-                             transition-colors duration-300"
-              >
-                Contact
-              </span>
-            </NavLink>
           </div>
         )}
       </div>

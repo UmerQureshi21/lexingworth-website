@@ -37,7 +37,7 @@ export default function NavBarLink({
         <>
           <p
             className={`text-${alignment} font-medium transition-all duration-300 group-hover:tracking-wide`}
-            style={{ color: colour }}
+            style={{ color: colour, textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}
           >
             {text}
           </p>

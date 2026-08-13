@@ -89,7 +89,20 @@ export default function PopUp() {
             }}
           >
             <NavBarLink
-              page="/"
+              page="/home"
+              text="Home"
+              widthPercent={90}
+              fontSize={40}
+              colour="white"
+            />
+          </div>
+          <div
+            onClick={() => {
+              setClicked((prev) => !prev);
+            }}
+          >
+            <NavBarLink
+              page="/about"
               text="About"
               widthPercent={90}
               fontSize={40}
@@ -130,19 +143,6 @@ export default function PopUp() {
             <NavBarLink
               page="/join"
               text="Join"
-              widthPercent={90}
-              fontSize={40}
-              colour="white"
-            />
-          </div>
-          <div
-            onClick={() => {
-              setClicked((prev) => !prev);
-            }}
-          >
-            <NavBarLink
-              page="/contact"
-              text="Contact"
               widthPercent={90}
               fontSize={40}
               colour="white"
