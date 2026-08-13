@@ -46,53 +46,63 @@ export default function Navbar() {
             ></span>
           </h2>
         </div>
-        {clientWidth < 900 ? (
+        {clientWidth < 1100 ? (
           <PopUp />
         ) : (
-          <div className="w-[40%]  relative right-[20px] flex items-center justify-between">
+          <div className="w-[440px] mr-6 flex items-center justify-between">
             <NavBarLink
               page="/"
-              text="Home"
-              widthPercent={20}
-              fontSize={15}
+              text="About"
+              widthPercent={17}
+              fontSize={14}
               alignment="center"
               colour="black"
             />
             <NavBarLink
-              page="/our-team"
-              text="Our Team"
-              widthPercent={20}
-              fontSize={15}
+              page="/events"
+              text="Events"
+              widthPercent={17}
+              fontSize={14}
               alignment="center"
               colour="black"
             />
             <NavBarLink
-              page="/past-events"
-              text="Past Events"
-              widthPercent={20}
-              fontSize={15}
+              page="/fund"
+              text="Fund"
+              widthPercent={17}
+              fontSize={14}
+              alignment="center"
+              colour="black"
+            />
+            <NavBarLink
+              page="/join"
+              text="Join"
+              widthPercent={17}
+              fontSize={14}
               alignment="center"
               colour="black"
             />
             {/* Contact Button with sick animations */}
-            <button
-              className="bg-[var(--color-primary)] text-white h-[40px] w-[20%] rounded-[20px] 
-                             hover:cursor-pointer relative overflow-hidden group/btn
+            <NavLink
+              to="/contact"
+              className="bg-[var(--color-primary)] text-white h-[40px] w-[100px] rounded-[20px]
+                             flex items-center justify-center
+                             relative overflow-hidden group/btn
                              transition-all duration-300 hover:scale-105 hover:shadow-xl
                              border-2 border-[var(--color-primary)] hover:border-[var(--color-accent)]"
             >
               {/* Sliding background effect */}
               <span
-                className="absolute inset-0 bg-[var(--color-accent)] translate-y-full 
+                className="absolute inset-0 bg-[var(--color-accent)] translate-y-full
                              group-hover/btn:translate-y-0 transition-transform duration-300"
               ></span>
               <span
-                className="relative z-10 font-semibold group-hover/btn:text-[var(--color-primary)] 
+                className="relative z-10 font-semibold group-hover/btn:text-[var(--color-primary)]
                              transition-colors duration-300"
               >
                 Contact
               </span>
-            </button>
+            </NavLink>
           </div>
         )}
       </div>

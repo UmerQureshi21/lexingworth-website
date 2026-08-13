@@ -1,57 +1,18 @@
-import { useState } from "react";
-import FaqSection from "../components/FaqSection";
 import Hero from "../components/Hero";
 import DescriptiveBox from "../components/DescriptiveBox";
-import EventsList from "../components/EventsList";
 
 const descriptiveBoxes = [
   {
-    title: "Who We Are",
+    title: "Our History",
     points: [
-      "Student-run investment club at McMaster University",
-      "Founded in 2017 at DeGroote School of Business",
-    ],
-  },
-  {
-    title: "Our Vision",
-    points: [
-      "Hands-on exposure to the finance industry",
-      "Active daily financial management experience",
-      "Competitive stock pitch participation",
-    ],
-  },
-];
-
-const whatWeOffer = [
-  {
-    title: "Networking Events",
-    points: [
-      "Connect with alumni in investment banking, private equity, and more",
-      "One-on-one mentorship opportunities with industry professionals",
-      "Exclusive member-only networking nights each semester",
-    ],
-  },
-  {
-    title: "Career Guidance",
-    points: [
-      "Resume and cover letter workshops tailored for finance roles",
-      "Mock interview sessions for analyst and advisory positions",
-      "LinkedIn optimization for maximum recruiter visibility",
-    ],
-  },
-  {
-    title: "Workshops & Seminars",
-    points: [
-      "Guest talks from portfolio managers, analysts, and bankers",
-      "Hands-on financial modeling and valuation training",
-      "Deep dives into investment strategies and market analysis",
+      "Founded in 2017 at McMaster University's DeGroote School of Business",
+      "Grew from a small group of students into a full student-run investment club",
+      "Built a track record of stock pitch competitions and hands-on portfolio management",
     ],
   },
 ];
 
 export default function Home() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <div className="w-full  relative top-[75px] flex flex-col justify-center items-center">
       <Hero />
@@ -62,61 +23,10 @@ export default function Home() {
             title={db.title}
             points={db.points}
             textSize={60}
-            widthPercent={50 / descriptiveBoxes.length}
+            widthPercent={50}
           />
         ))}
       </div>
-      <div className="w-full bg-[var(--color-cream)] flex flex-col items-center pb-[100px] px-6">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl pt-[100px] font-bold text-center mb-12">
-          What do We Offer?
-        </h1>
-
-        <div className="w-full max-w-2xl flex flex-col gap-4">
-          {whatWeOffer.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-md border-2 border-transparent transition-all duration-300 hover:shadow-lg overflow-hidden"
-                style={isOpen ? { borderColor: "var(--color-accent)" } : {}}
-              >
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer"
-                >
-                  <span className="text-xl sm:text-2xl font-semibold text-[var(--color-primary)]">
-                    {item.title}
-                  </span>
-                  <span
-                    className="text-2xl text-[var(--color-primary)] transition-transform duration-300"
-                    style={isOpen ? { transform: "rotate(45deg)" } : {}}
-                  >
-                    +
-                  </span>
-                </button>
-                <div
-                  className="transition-all duration-300 ease-in-out overflow-hidden"
-                  style={{
-                    maxHeight: isOpen ? "300px" : "0px",
-                    opacity: isOpen ? 1 : 0,
-                  }}
-                >
-                  <ul className="px-6 pb-5 flex flex-col gap-3">
-                    {item.points.map((point, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="mt-1.5 w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0" />
-                        <span className="text-gray-700">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <EventsList />
-      <FaqSection />
     </div>
   );
 }
