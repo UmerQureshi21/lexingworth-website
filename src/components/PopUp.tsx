@@ -71,18 +71,7 @@ export default function PopUp() {
           </svg>
         </button>
 
-        <div className="w-[90%] relative z-10 mt-20">
-          <div className="mb-8">
-            <div className="w-16 h-1 bg-[var(--color-accent)] mb-4"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-              Navigate Your
-              <br />
-              <span className="text-[var(--color-accent)]">Financial Future</span>
-            </h2>
-          </div>
-        </div>
-
-        <div className="w-[90%] flex flex-col relative space-y-6 z-10">
+        <div className="w-[90%] flex flex-col relative space-y-6 z-10 mt-20">
           <div
             onClick={() => {
               setClicked((prev) => !prev);
