@@ -1,10 +1,10 @@
 const posts = [
+  "/team.png",
   "/ig-1.png",
   "/ig-2.png",
   "/ig-3.png",
   "/ig-4.png",
   "/ig-5.png",
-  "/ig-6.png",
 ];
 
 export default function InstagramFeed() {

@@ -104,8 +104,8 @@ export default function PopUp() {
             }}
           >
             <NavBarLink
-              page="/events"
-              text="Events"
+              page="/fund"
+              text="Fund"
               widthPercent={90}
               fontSize={40}
               colour="white"
@@ -117,8 +117,8 @@ export default function PopUp() {
             }}
           >
             <NavBarLink
-              page="/fund"
-              text="Fund"
+              page="/events"
+              text="Events"
               widthPercent={90}
               fontSize={40}
               colour="white"
