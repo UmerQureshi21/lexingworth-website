@@ -35,6 +35,11 @@ export default function Join() {
             Download PDF
           </span>
         </a>
+
+        <p className="text-lg leading-relaxed text-gray-800 mt-12">
+          Make sure to follow us on Instagram, and if you have any questions,
+          reach out to lexingworth@gmail.com.
+        </p>
       </div>
     </div>
   );

@@ -47,16 +47,16 @@ export default function Navbar() {
               colour="white"
             />
             <NavBarLink
-              page="/events"
-              text="Events"
+              page="/fund"
+              text="Fund"
               widthPercent={18}
               fontSize={14}
               alignment="center"
               colour="white"
             />
             <NavBarLink
-              page="/fund"
-              text="Fund"
+              page="/events"
+              text="Events"
               widthPercent={18}
               fontSize={14}
               alignment="center"
