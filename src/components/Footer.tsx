@@ -97,14 +97,6 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>
-                  <NavLink
-                    to="/contact"
-                    className="hover:text-white transition-colors duration-300"
-                  >
-                    Contact Us
-                  </NavLink>
-                </li>
-                <li>
                   <a
                     href="mailto:lexingworth@gmail.com"
                     className="hover:text-white transition-colors duration-300 break-all"
