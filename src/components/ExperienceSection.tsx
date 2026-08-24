@@ -2,19 +2,19 @@ import { useState } from "react";
 
 const experiences = [
   {
-    title: "$50,000+ in Tooling Per Analyst",
+    title: "Advanced Investment Tools",
     description:
-      "Analysts get hands-on access to the same research terminals, data providers, and modeling tools used on professional trading floors.",
+      "Analysts get hands-on access to the same tools used on professional trading floors, including the Bloomberg Terminal, S&P Capital IQ Pro, Refinitiv LSEG, Wall Street Prep, The Wall Street Journal, and Financial Edge.",
   },
   {
     title: "Stock Pitch Competitions",
     description:
-      "Members compete in stock pitch competitions against other schools, sharpening the same skills used by professional investors.",
+      "Members compete in stock pitch competitions both internally and externally, against other schools, sharpening the same skills used by professional investors.",
   },
   {
     title: "Training Program",
     description:
-      "New analysts go through a structured training program covering financial modeling, valuation, and pitch writing before joining a coverage group.",
+      "All analysts go through a structured training program covering financial modeling, valuation, and interview prep, with access to tier 1 material and templates.",
   },
   {
     title: "Exclusive Community and Recruiting Events",
@@ -30,7 +30,7 @@ export default function ExperienceSection() {
     <div className="w-full bg-[var(--color-primary)] text-white py-[100px] px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-[45px] font-bold text-center mb-10">
-          The Lexingworth Capital Experience
+          The "LEX" Experience
         </h2>
         <div className="border-t border-white/20">
           {experiences.map((experience, index) => {
