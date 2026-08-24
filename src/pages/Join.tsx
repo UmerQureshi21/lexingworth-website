@@ -53,6 +53,18 @@ export default function Join() {
           </span>
         </a>
 
+        <div className="w-full max-w-sm border-2 border-[var(--color-primary)] p-8 flex flex-col items-center text-center gap-4 mt-8">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">
+            Fall Hiring
+          </span>
+          <h3 className="text-xl font-semibold text-[var(--color-primary)]">
+            Investment Team Fall Application
+          </h3>
+          <span className="inline-block bg-black text-white px-6 py-2 text-sm font-medium">
+            Coming Soon
+          </span>
+        </div>
+
         <p className="text-lg leading-relaxed text-gray-800 mt-12">
           Make sure to follow us on Instagram, and if you have any questions,
           reach out to lexingworth@gmail.com.
