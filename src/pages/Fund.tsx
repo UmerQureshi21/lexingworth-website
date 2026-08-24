@@ -1,3 +1,5 @@
+import ExperienceSection from "../components/ExperienceSection";
+
 const coverageGroups = [
   {
     name: "Consumer & Retail",
@@ -59,7 +61,11 @@ export default function Fund() {
           working together to research, monitor, and pitch ideas within
           their sector.
         </p>
+      </div>
 
+      <ExperienceSection />
+
+      <div className="w-full max-w-6xl px-6 py-[100px]">
         <h2 className="text-2xl font-semibold text-[var(--color-primary)] mb-10 text-center">
           Coverage Groups
         </h2>
