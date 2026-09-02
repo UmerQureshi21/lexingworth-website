@@ -37,23 +37,6 @@ export default function Join() {
         </a>
 
         <a
-          href="https://forms.gle/DhRRv6Pjcfx6t7pDA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-sm border-2 border-[var(--color-primary)] p-8 flex flex-col items-center text-center gap-4 hover:bg-[var(--color-primary)] transition-colors duration-300 group mt-8"
-        >
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-500 group-hover:text-white/70">
-            Marketing Hiring
-          </span>
-          <h3 className="text-xl font-semibold text-[var(--color-primary)] group-hover:text-white">
-            Marketing Team Application
-          </h3>
-          <span className="inline-block bg-black text-white group-hover:bg-white group-hover:text-[var(--color-primary)] px-6 py-2 text-sm font-medium transition-colors duration-300">
-            Apply Now
-          </span>
-        </a>
-
-        <a
           href="https://forms.gle/GRfef8z9z1RgehFYA"
           target="_blank"
           rel="noopener noreferrer"
