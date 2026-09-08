@@ -1,4 +1,29 @@
-import ExperienceSection from "../components/ExperienceSection";
+const pillars = [
+  {
+    number: "01",
+    title: "Research-Driven",
+    description:
+      "Every investment decision is grounded in rigorous fundamental research, disciplined analysis, and peer review before it's added to our portfolio.",
+  },
+  {
+    number: "02",
+    title: "Hands-On Experience",
+    description:
+      "Members manage a simulated portfolio and pitch ideas at general meetings, gaining practical, real-world experience in a low-stakes setting.",
+  },
+  {
+    number: "03",
+    title: "Mentorship & Alumni",
+    description:
+      "An active alumni network across leading firms works directly with current members to help them break into the industry.",
+  },
+  {
+    number: "04",
+    title: "Competitive Excellence",
+    description:
+      "Our teams regularly compete in stock pitch competitions, sharpening the same skills used by professional investors.",
+  },
+];
 
 const coverageGroups = [
   {
@@ -63,7 +88,36 @@ export default function Fund() {
         </p>
       </div>
 
-      <ExperienceSection />
+      <div className="w-full bg-white px-6 py-[120px]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4">
+            Our Approach
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16">
+            Four principles guide how we operate, from the way we research
+            ideas to the way we support our members long after they graduate.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {pillars.map((pillar) => (
+              <div
+                key={pillar.number}
+                className="border-t-2 border-[var(--color-primary)] pt-6"
+              >
+                <span className="text-sm font-semibold tracking-widest text-gray-400">
+                  {pillar.number}
+                </span>
+                <h3 className="text-xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-600">
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <div className="w-full max-w-6xl px-6 py-[100px]">
         <h2 className="text-2xl font-semibold text-[var(--color-primary)] mb-10 text-center">
