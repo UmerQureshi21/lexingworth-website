@@ -49,6 +49,42 @@ export default function About() {
       </div>
 
       <ExperienceSection />
+
+      <div className="w-full bg-white px-6 py-[120px]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4">
+            Partnerships
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16">
+            We work with industry-leading organizations to bring our members
+            resources, training, and connections beyond what the classroom
+            offers.
+          </p>
+
+          <div className="border-2 border-[var(--color-primary)] p-10 flex flex-col sm:flex-row items-center gap-10">
+            <img
+              src="/logos/logo-wso.png"
+              alt="Wall Street Oasis"
+              className="h-24 w-24 object-contain shrink-0"
+            />
+            <div className="text-center sm:text-left">
+              <span className="text-sm font-semibold tracking-widest text-gray-400">
+                2026–2027 PARTNER
+              </span>
+              <h3 className="text-2xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
+                Wall Street Oasis
+              </h3>
+              <p className="text-base leading-relaxed text-gray-600 max-w-2xl">
+                This year, Lexingworth Capital is partnering with Wall Street
+                Oasis (WSO), the largest online community focused on careers in
+                finance. The partnership gives our members access to WSO's
+                courses, interview prep, and industry network as they prepare
+                to break into the industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -75,17 +75,19 @@ export default function Fund() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
       </div>
 
-      <div className="w-full max-w-6xl px-6 py-[100px]">
-        <h1 className="text-[50px] font-bold text-[var(--color-primary)] text-center mb-6">
-          Fund
-        </h1>
-        <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-800 text-center mb-20">
-          Our members are organized into coverage groups, each focused on a
-          specific sector. Every group generally aims for six members,
-          including a Portfolio Manager, Senior Analysts, and Analysts,
-          working together to research, monitor, and pitch ideas within
-          their sector.
-        </p>
+      <div className="w-full bg-[var(--color-cream)] px-6 py-[120px]">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-[50px] font-bold text-[var(--color-primary)] text-center mb-6">
+            Fund
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-800 text-center">
+            Our members are organized into coverage groups, each focused on a
+            specific sector. Every group generally aims for six members,
+            including a Portfolio Manager, Senior Analysts, and Analysts,
+            working together to research, monitor, and pitch ideas within
+            their sector.
+          </p>
+        </div>
       </div>
 
       <div className="w-full bg-white px-6 py-[120px]">
@@ -117,6 +119,15 @@ export default function Fund() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="w-full relative h-[400px] overflow-hidden">
+        <img
+          src="/photo12.png"
+          alt="Downtown skyline"
+          className="w-full h-full object-cover grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
       </div>
 
       <div className="w-full max-w-6xl px-6 py-[100px]">
