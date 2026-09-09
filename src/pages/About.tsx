@@ -61,26 +61,51 @@ export default function About() {
             offers.
           </p>
 
-          <div className="border-2 border-[var(--color-primary)] p-10 flex flex-col sm:flex-row items-center gap-10">
-            <img
-              src="/logos/logo-wso.png"
-              alt="Wall Street Oasis"
-              className="h-24 w-24 object-contain shrink-0"
-            />
-            <div className="text-center sm:text-left">
-              <span className="text-sm font-semibold tracking-widest text-gray-400">
-                2026–2027 PARTNER
-              </span>
-              <h3 className="text-2xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
-                Wall Street Oasis
-              </h3>
-              <p className="text-base leading-relaxed text-gray-600 max-w-2xl">
-                This year, Lexingworth Capital is partnering with Wall Street
-                Oasis (WSO), the largest online community focused on careers in
-                finance. The partnership gives our members access to WSO's
-                courses, interview prep, and industry network as they prepare
-                to break into the industry.
-              </p>
+          <div className="space-y-8">
+            <div className="border-2 border-[var(--color-primary)] p-10 flex flex-col sm:flex-row items-center gap-10">
+              <img
+                src="/logos/logo-wso.png"
+                alt="Wall Street Oasis"
+                className="h-24 w-24 object-contain shrink-0"
+              />
+              <div className="text-center sm:text-left">
+                <span className="text-sm font-semibold tracking-widest text-gray-400">
+                  2026–2027 PARTNER
+                </span>
+                <h3 className="text-2xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
+                  Wall Street Oasis
+                </h3>
+                <p className="text-base leading-relaxed text-gray-600 max-w-2xl">
+                  This year, Lexingworth Capital is partnering with Wall Street
+                  Oasis (WSO), the largest online community focused on careers in
+                  finance. The partnership gives our members access to WSO's
+                  courses, interview prep, and industry network as they prepare
+                  to break into the industry.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-2 border-[var(--color-primary)] p-10 flex flex-col sm:flex-row items-center gap-10">
+              <img
+                src="/logos/logo-cfi.png"
+                alt="Corporate Finance Institute"
+                className="h-16 w-40 object-contain shrink-0"
+              />
+              <div className="text-center sm:text-left">
+                <span className="text-sm font-semibold tracking-widest text-gray-400">
+                  2026–2027 PARTNER
+                </span>
+                <h3 className="text-2xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
+                  Corporate Finance Institute
+                </h3>
+                <p className="text-base leading-relaxed text-gray-600 max-w-2xl">
+                  Lexingworth Capital has partnered with the Corporate Finance
+                  Institute (CFI), one of the most widely recognized names in
+                  finance certification. Members get an exclusive discount code
+                  for CFI's courses in financial modeling, valuation, and Excel,
+                  the same technical training used across the industry.
+                </p>
+              </div>
             </div>
           </div>
         </div>
