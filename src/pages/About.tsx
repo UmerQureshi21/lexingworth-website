@@ -66,7 +66,7 @@ export default function About() {
               <img
                 src="/logos/logo-wso.png"
                 alt="Wall Street Oasis"
-                className="h-24 w-24 object-contain shrink-0"
+                className="h-28 w-40 object-contain shrink-0"
               />
               <div className="text-center sm:text-left">
                 <span className="text-sm font-semibold tracking-widest text-gray-400">
@@ -89,7 +89,7 @@ export default function About() {
               <img
                 src="/logos/logo-cfi.png"
                 alt="Corporate Finance Institute"
-                className="h-16 w-40 object-contain shrink-0"
+                className="h-20 w-40 object-contain shrink-0"
               />
               <div className="text-center sm:text-left">
                 <span className="text-sm font-semibold tracking-widest text-gray-400">
@@ -112,7 +112,7 @@ export default function About() {
               <img
                 src="/logos/logo-cfa-society-toronto.png"
                 alt="CFA Society Toronto"
-                className="h-16 w-40 object-contain shrink-0"
+                className="h-20 w-40 object-contain shrink-0"
               />
               <div className="text-center sm:text-left">
                 <span className="text-sm font-semibold tracking-widest text-gray-400">
