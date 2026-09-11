@@ -12,7 +12,10 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
       </div>
 
-      <div className="w-full bg-[var(--color-cream)] px-6 py-[120px]">
+      <div
+        id="about-us"
+        className="w-full bg-[var(--color-cream)] px-6 py-[120px] scroll-mt-[90px]"
+      >
         <div className="max-w-6xl mx-auto">
           <h1 className="text-[45px] font-bold text-[var(--color-primary)] mb-8">
             About Us
@@ -50,7 +53,10 @@ export default function About() {
 
       <ExperienceSection />
 
-      <div className="w-full bg-white px-6 py-[120px]">
+      <div
+        id="partnerships"
+        className="w-full bg-white px-6 py-[120px] scroll-mt-[90px]"
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4">
             Partnerships &amp; Affiliates

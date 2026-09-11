@@ -45,6 +45,11 @@ export default function Navbar() {
               fontSize={14}
               alignment="center"
               colour="white"
+              subLinks={[
+                { text: "About Us", hash: "about-us" },
+                { text: 'The "LEX" Experience', hash: "experience" },
+                { text: "Partnerships & Affiliates", hash: "partnerships" },
+              ]}
             />
             <NavBarLink
               page="/fund"

@@ -27,7 +27,10 @@ export default function ExperienceSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full bg-[var(--color-primary)] text-white py-[100px] px-6">
+    <div
+      id="experience"
+      className="w-full bg-[var(--color-primary)] text-white py-[100px] px-6 scroll-mt-[90px]"
+    >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-[45px] font-bold text-center mb-10">
           The "LEX" Experience
