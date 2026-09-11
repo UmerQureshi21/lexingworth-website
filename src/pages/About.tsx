@@ -93,13 +93,13 @@ export default function About() {
               />
               <div className="text-center sm:text-left">
                 <span className="text-sm font-semibold tracking-widest text-gray-400">
-                  2026–2027 PARTNER
+                  2026–2027 AFFILIATE
                 </span>
                 <h3 className="text-2xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
                   Corporate Finance Institute
                 </h3>
                 <p className="text-base leading-relaxed text-gray-600 max-w-2xl">
-                  Lexingworth Capital has partnered with the Corporate Finance
+                  Lexingworth Capital is affiliated with the Corporate Finance
                   Institute (CFI), one of the most widely recognized names in
                   finance certification. Members get an exclusive discount code
                   for CFI's courses in financial modeling, valuation, and Excel,
