@@ -116,6 +116,30 @@ export default function About() {
 
             <div className="border-2 border-[var(--color-primary)] p-10 flex flex-col sm:flex-row items-center gap-10">
               <img
+                src="/logos/logo-biws.webp"
+                alt="Breaking Into Wall Street"
+                className="h-28 w-40 object-contain shrink-0"
+              />
+              <div className="text-center sm:text-left">
+                <span className="text-sm font-semibold tracking-widest text-gray-400">
+                  2026–2027 AFFILIATE
+                </span>
+                <h3 className="text-2xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
+                  Breaking Into Wall Street
+                </h3>
+                <p className="text-base leading-relaxed text-gray-600 max-w-2xl">
+                  Lexingworth Capital is affiliated with Breaking Into Wall
+                  Street (BIWS), a leading provider of financial modeling and
+                  investment banking training. Members get an exclusive
+                  discount code for BIWS's courses in financial modeling,
+                  valuation, and technical interview prep, the same training
+                  used by professionals across the industry.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-2 border-[var(--color-primary)] p-10 flex flex-col sm:flex-row items-center gap-10">
+              <img
                 src="/logos/logo-cfa-society-toronto.png"
                 alt="CFA Society Toronto"
                 className="h-20 w-40 object-contain shrink-0"
