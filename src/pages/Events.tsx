@@ -1,9 +1,9 @@
 const events = [
   {
-    image: "/ig-1.png",
-    title: "Summer Hiring — Investment Team",
+    image: "/fall-hiring-post.png",
+    title: "Fall Hiring — Investment Team",
     description:
-      "Applications for our Investment Team close July 24th, with interviews running August 3rd–5th and offers going out August 10th. Apply through the link in our bio.",
+      "Applications for our Investment Team closed September 20th, with interviews running September 26th–29th and offers going out September 30th. Thank you to everyone who applied.",
   },
   {
     image: "/ig-2.png",
