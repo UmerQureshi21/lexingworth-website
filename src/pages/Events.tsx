@@ -19,6 +19,21 @@ const events = [
   },
 ];
 
+const educationals = [
+  {
+    image: "/educationals/dcf-cover.png",
+    title: "Valuation 101: Discounted Cash Flow",
+    description:
+      "A first-principles walkthrough of intrinsic valuation on the Lexingworth Model, from projecting free cash flow to calibrating the discount rate and deriving fair value the way our analysts do on live coverage names.",
+  },
+  {
+    image: "/educationals/comps-precedent-cover.png",
+    title: "Valuation 101: Comps & Precedent Transactions",
+    description:
+      "A disciplined approach to relative valuation on the Lexingworth Model, from screening the right peer set and precedent deals to benchmarking multiples the way top desks do.",
+  },
+];
+
 export default function Events() {
   return (
     <div className="w-full flex flex-col items-center">
@@ -53,6 +68,32 @@ export default function Events() {
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   {event.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-[36px] font-bold text-[var(--color-primary)] text-center mt-32 mb-4">
+          Educationals
+        </h2>
+        <p className="text-lg leading-relaxed text-gray-700 text-center max-w-2xl mx-auto mb-16">
+          Institutional-grade technical training built around the Lexingworth
+          Model, giving our members the same rigor and toolkit used on
+          trading floors and in investment committees across the industry.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {educationals.map((session, i) => (
+            <div key={i} className="border-2 border-[var(--color-primary)]">
+              <img
+                src={session.image}
+                alt={session.title}
+                className="w-full aspect-[4/3] object-cover"
+              />
+              <div className="p-6">
+                <p className="text-gray-700 leading-relaxed">
+                  {session.description}
                 </p>
               </div>
             </div>
