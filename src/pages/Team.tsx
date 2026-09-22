@@ -76,11 +76,11 @@ function MemberCard({ member }: { member: Member }) {
       ) : (
         photo
       )}
-      <h3 className="text-xl font-semibold text-[var(--color-primary)] mt-4">
+      <h3 className="text-xl font-semibold text-[var(--color-primary)] mt-4 text-center">
         {member.name}
       </h3>
-      <p className="text-sm text-gray-700 mt-1">{member.role}</p>
-      <p className="text-sm text-gray-500">{member.placement}</p>
+      <p className="text-sm text-gray-700 mt-1 text-center">{member.role}</p>
+      <p className="text-sm text-gray-500 text-center">{member.placement}</p>
     </div>
   );
 }
@@ -99,10 +99,10 @@ export default function Team() {
 
       <div className="w-full bg-white px-6 py-[120px]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4">
+          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
             Executive Team
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16">
+          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16 mx-auto text-center">
             Our executives are responsible for member recruitment and
             mentorship, running educationals, and progressing the club's
             strategic vision.
@@ -118,10 +118,10 @@ export default function Team() {
 
       <div className="w-full bg-[var(--color-cream)] px-6 py-[120px]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4">
+          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
             Portfolio Managers
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16">
+          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16 mx-auto text-center">
             Our Portfolio Managers are responsible for leading their coverage
             group and team, providing guidance to analysts throughout the
             research process.
