@@ -108,7 +108,7 @@ export default function Team() {
             strategic vision.
           </p>
 
-          <div className="grid grid-cols-2 gap-10 max-w-2xl">
+          <div className="grid grid-cols-2 gap-10 max-w-2xl mx-auto">
             {executiveTeam.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}
@@ -127,7 +127,7 @@ export default function Team() {
             research process.
           </p>
 
-          <div className="grid grid-cols-2 gap-10 max-w-2xl">
+          <div className="grid grid-cols-2 gap-10 max-w-2xl mx-auto">
             {portfolioManagers.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}

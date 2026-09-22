@@ -39,14 +39,6 @@ export default function Navbar() {
               colour="white"
             />
             <NavBarLink
-              page="/team"
-              text="Team"
-              widthPercent={15}
-              fontSize={14}
-              alignment="center"
-              colour="white"
-            />
-            <NavBarLink
               page="/about"
               text="About"
               widthPercent={15}
@@ -58,6 +50,14 @@ export default function Navbar() {
                 { text: 'The "LEX" Experience', hash: "experience" },
                 { text: "Partnerships & Affiliates", hash: "partnerships" },
               ]}
+            />
+            <NavBarLink
+              page="/team"
+              text="Team"
+              widthPercent={15}
+              fontSize={14}
+              alignment="center"
+              colour="white"
             />
             <NavBarLink
               page="/fund"
