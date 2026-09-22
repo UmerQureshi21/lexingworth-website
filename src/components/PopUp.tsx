@@ -91,6 +91,19 @@ export default function PopUp() {
             }}
           >
             <NavBarLink
+              page="/team"
+              text="Team"
+              widthPercent={90}
+              fontSize={40}
+              colour="white"
+            />
+          </div>
+          <div
+            onClick={() => {
+              setClicked((prev) => !prev);
+            }}
+          >
+            <NavBarLink
               page="/about"
               text="About"
               widthPercent={90}

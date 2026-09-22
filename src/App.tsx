@@ -7,6 +7,7 @@ import {
 } from "react-router";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
+import Team from "./pages/Team";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFount";
 import Events from "./pages/Events";
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/fund" element={<Fund />} />
