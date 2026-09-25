@@ -2,6 +2,7 @@ interface Member {
   name: string;
   role: string;
   placement: string;
+  email: string;
   photo?: string;
   linkedin?: string;
 }
@@ -11,6 +12,7 @@ const executiveTeam: Member[] = [
     name: "Noah Patel",
     role: "Chief Executive Officer",
     placement: "TD Asset Management, Toronto",
+    email: "paten148@mcmaster.ca",
     photo: "/exec_team/noah-patel.png",
     linkedin: "https://www.linkedin.com/in/noah-patel/",
   },
@@ -18,6 +20,7 @@ const executiveTeam: Member[] = [
     name: "Ammar Malick",
     role: "Chief Investment Officer",
     placement: "Mackenzie Investments, Toronto",
+    email: "malica2@mcmaster.ca",
     photo: "/exec_team/ammar-malick.png",
     linkedin: "https://www.linkedin.com/in/ammarmalick/",
   },
@@ -28,6 +31,7 @@ const portfolioManagers: Member[] = [
     name: "Daniel Levy",
     role: "Portfolio Manager, Industrials",
     placement: "Greenshield, Toronto",
+    email: "levyd8@mcmaster.ca",
     photo: "/exec_team/daniel-levy.png",
     linkedin: "https://www.linkedin.com/in/levydaniel8/",
   },
@@ -35,6 +39,7 @@ const portfolioManagers: Member[] = [
     name: "Mehakpreet Thind",
     role: "Portfolio Manager, Healthcare",
     placement: "Cypress Atlantic, Toronto",
+    email: "thindm5@mcmaster.ca",
     photo: "/exec_team/mehakpreet-thind.png",
     linkedin: "https://www.linkedin.com/in/mehakpreetthind/",
   },
@@ -81,6 +86,9 @@ function MemberCard({ member }: { member: Member }) {
       </h3>
       <p className="text-sm text-gray-700 mt-1 text-center">{member.role}</p>
       <p className="text-sm text-gray-500 text-center">{member.placement}</p>
+      <p className="text-sm text-gray-500 italic text-center">
+        {member.email}
+      </p>
     </div>
   );
 }
