@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router";
 
 export default function PageNotFound() {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex";
+    document.head.appendChild(meta);
+
+    return () => {
+      document.head.removeChild(meta);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex items-center justify-center px-6 relative ">
       {/* Animated grid pattern */}
