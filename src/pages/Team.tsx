@@ -1,7 +1,7 @@
 interface Member {
   name: string;
   role: string;
-  placement: string;
+  placement?: string;
   email: string;
   photo?: string;
   linkedin?: string;
@@ -42,6 +42,14 @@ const portfolioManagers: Member[] = [
     email: "thindm5@mcmaster.ca",
     photo: "/exec_team/mehakpreet-thind.png",
     linkedin: "https://www.linkedin.com/in/mehakpreetthind/",
+  },
+  {
+    name: "Fawaz Tehami",
+    role: "Portfolio Manager, Renewable Energy",
+    placement: "Tehami Capital, Toronto",
+    email: "tehamif@mcmaster.ca",
+    photo: "/exec_team/fawaz-tehami.png",
+    linkedin: "https://www.linkedin.com/in/fawaz-tehami/",
   },
 ];
 
@@ -85,7 +93,11 @@ function MemberCard({ member }: { member: Member }) {
         {member.name}
       </h3>
       <p className="text-sm text-gray-700 mt-1 text-center">{member.role}</p>
-      <p className="text-sm text-gray-500 text-center">{member.placement}</p>
+      {member.placement && (
+        <p className="text-sm text-gray-500 text-center">
+          {member.placement}
+        </p>
+      )}
       <p className="text-sm text-gray-500 italic text-center">
         {member.email}
       </p>
@@ -135,7 +147,7 @@ export default function Team() {
             research process.
           </p>
 
-          <div className="grid grid-cols-2 gap-10 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
             {portfolioManagers.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}
