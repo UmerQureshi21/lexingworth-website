@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import PageNotFound from "./pages/PageNotFount";
 import Events from "./pages/Events";
 import Fund from "./pages/Fund";
+import Placements from "./pages/Placements";
 import Join from "./pages/Join";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/events" element={<Events />} />
         <Route path="/fund" element={<Fund />} />
+        <Route path="/placements" element={<Placements />} />
         <Route path="/join" element={<Join />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>

@@ -29,11 +29,11 @@ export default function Navbar() {
         {clientWidth < 1100 ? (
           <PopUp />
         ) : (
-          <div className="w-[480px] mr-6 flex items-center justify-between">
+          <div className="w-[560px] mr-6 flex items-center justify-between">
             <NavBarLink
               page="/home"
               text="Home"
-              widthPercent={15}
+              widthPercent={13}
               fontSize={14}
               alignment="center"
               colour="white"
@@ -41,7 +41,7 @@ export default function Navbar() {
             <NavBarLink
               page="/about"
               text="About"
-              widthPercent={15}
+              widthPercent={13}
               fontSize={14}
               alignment="center"
               colour="white"
@@ -54,7 +54,7 @@ export default function Navbar() {
             <NavBarLink
               page="/team"
               text="Team"
-              widthPercent={15}
+              widthPercent={13}
               fontSize={14}
               alignment="center"
               colour="white"
@@ -62,7 +62,15 @@ export default function Navbar() {
             <NavBarLink
               page="/fund"
               text="Fund"
-              widthPercent={15}
+              widthPercent={13}
+              fontSize={14}
+              alignment="center"
+              colour="white"
+            />
+            <NavBarLink
+              page="/placements"
+              text="Placements"
+              widthPercent={13}
               fontSize={14}
               alignment="center"
               colour="white"
@@ -70,7 +78,7 @@ export default function Navbar() {
             <NavBarLink
               page="/events"
               text="Events"
-              widthPercent={15}
+              widthPercent={13}
               fontSize={14}
               alignment="center"
               colour="white"
@@ -78,7 +86,7 @@ export default function Navbar() {
             <NavBarLink
               page="/join"
               text="Join"
-              widthPercent={15}
+              widthPercent={13}
               fontSize={14}
               alignment="center"
               colour="white"
