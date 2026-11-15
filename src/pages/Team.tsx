@@ -53,6 +53,11 @@ const portfolioManagers: Member[] = [
   },
 ];
 
+const teamStats = [
+  { value: "100+", label: "Alumni" },
+  { value: "33", label: "Current Members" },
+];
+
 function initials(name: string) {
   const parts = name.trim().split(/\s+/);
   return parts.length > 1
@@ -115,6 +120,23 @@ export default function Team() {
           className="w-full h-full object-cover grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
+        <div className="absolute inset-0 pt-[75px] flex items-center justify-center px-6">
+          <div className="flex items-center justify-center gap-8 sm:gap-24 text-white text-center">
+            {teamStats.map((stat, i) => (
+              <div key={stat.label} className="flex items-center gap-8 sm:gap-24">
+                {i > 0 && <div className="w-px h-28 sm:h-40 bg-white/40" />}
+                <div className="min-w-[140px] sm:min-w-[300px]">
+                  <p className="text-[64px] sm:text-[120px] font-bold leading-none">
+                    {stat.value}
+                  </p>
+                  <p className="mt-4 text-base sm:text-2xl uppercase tracking-[0.2em] text-white/85">
+                    {stat.label}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="w-full bg-white px-6 py-[120px]">
