@@ -252,7 +252,10 @@ export default function Team() {
         </div>
       </div>
 
-      <div className="w-full bg-white px-6 py-[120px]">
+      <div
+        id="executive-team"
+        className="w-full bg-white px-6 py-[120px] scroll-mt-[75px]"
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
             Executive Team
@@ -271,7 +274,10 @@ export default function Team() {
         </div>
       </div>
 
-      <div className="w-full bg-[var(--color-cream)] px-6 py-[120px]">
+      <div
+        id="portfolio-managers"
+        className="w-full bg-[var(--color-cream)] px-6 py-[120px] scroll-mt-[75px]"
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
             Portfolio Managers
@@ -290,7 +296,10 @@ export default function Team() {
         </div>
       </div>
 
-      <div className="w-full bg-white px-6 py-[120px]">
+      <div
+        id="past-executives"
+        className="w-full bg-white px-6 py-[120px] scroll-mt-[75px]"
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
             Past Executives

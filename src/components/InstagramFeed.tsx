@@ -9,7 +9,10 @@ const posts = [
 
 export default function InstagramFeed() {
   return (
-    <div className="w-full bg-white py-[100px] px-6">
+    <div
+      id="follow-us"
+      className="w-full bg-white py-[100px] px-6 scroll-mt-[75px]"
+    >
       <h2 className="text-5xl font-extrabold text-center mb-12 text-black">
         Follow Us
       </h2>

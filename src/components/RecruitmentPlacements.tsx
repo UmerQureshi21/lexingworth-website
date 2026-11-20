@@ -20,7 +20,10 @@ const companies = [
 
 export default function RecruitmentPlacements() {
   return (
-    <div className="w-full flex flex-col items-center py-[80px]">
+    <div
+      id="recruitment-placements"
+      className="w-full flex flex-col items-center py-[80px] scroll-mt-[75px]"
+    >
       <div className="w-full max-w-6xl flex flex-col items-center text-center px-6 mb-16">
         <h1 className="text-[45px] font-bold mb-6 text-[var(--color-primary)]">
           Recruitment Placements

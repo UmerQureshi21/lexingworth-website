@@ -47,7 +47,10 @@ export default function Events() {
       </div>
 
       <div className="w-full max-w-5xl px-6 py-[80px] flex flex-col">
-        <h1 className="text-[50px] font-bold text-[var(--color-primary)] text-center mb-20">
+        <h1
+          id="events"
+          className="text-[50px] font-bold text-[var(--color-primary)] text-center mb-20 scroll-mt-[150px]"
+        >
           Events
         </h1>
 
@@ -74,7 +77,10 @@ export default function Events() {
           ))}
         </div>
 
-        <h2 className="text-[36px] font-bold text-[var(--color-primary)] text-center mt-32 mb-4">
+        <h2
+          id="educationals"
+          className="text-[36px] font-bold text-[var(--color-primary)] text-center mt-32 mb-4 scroll-mt-[120px]"
+        >
           Educationals
         </h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center max-w-2xl mx-auto mb-16">

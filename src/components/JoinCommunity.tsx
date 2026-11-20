@@ -2,7 +2,10 @@ import { NavLink } from "react-router";
 
 export default function JoinCommunity() {
   return (
-    <div className="w-full bg-[var(--color-primary)] text-white py-[100px] px-6">
+    <div
+      id="join-community"
+      className="w-full bg-[var(--color-primary)] text-white py-[100px] px-6 scroll-mt-[75px]"
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
           <h2 className="text-4xl font-bold mb-6">Join Our Community</h2>

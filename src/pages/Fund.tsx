@@ -122,37 +122,21 @@ export default function Fund() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
       </div>
 
-      <div className="w-full bg-[var(--color-cream)] px-6 py-[120px]">
+      <div
+        id="coverage-groups"
+        className="w-full bg-white px-6 py-[120px] scroll-mt-[75px]"
+      >
         <div className="max-w-6xl mx-auto">
           <h1 className="text-[50px] font-bold text-[var(--color-primary)] text-center mb-6">
             Fund
           </h1>
-          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-800 text-center">
+          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-800 text-center mb-16">
             Our members are organized into coverage groups, each focused on a
             specific sector. Every group generally aims for six members,
             including a Portfolio Manager, Senior Analysts, and Analysts,
             working together to research, monitor, and pitch ideas within
             their sector.
           </p>
-        </div>
-      </div>
-
-      <div className="w-full relative h-[400px] overflow-hidden">
-        <img
-          src="/photo12.png"
-          alt="Downtown skyline"
-          className="w-full h-full object-cover grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
-      </div>
-
-      <div
-        id="coverage-groups"
-        className="w-full max-w-6xl px-6 py-[100px] scroll-mt-[90px]"
-      >
-        <h2 className="text-2xl font-semibold text-[var(--color-primary)] mb-10 text-center">
-          Coverage Groups
-        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {coverageGroups.map((group, i) => (
             <div
@@ -170,6 +154,7 @@ export default function Fund() {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </div>
 

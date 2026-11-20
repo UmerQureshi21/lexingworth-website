@@ -37,6 +37,12 @@ export default function Navbar() {
               fontSize={14}
               alignment="center"
               colour="white"
+              subLinks={[
+                { text: "Our History", hash: "our-history" },
+                { text: "Recruitment Placements", hash: "recruitment-placements" },
+                { text: "Join Our Community", hash: "join-community" },
+                { text: "Follow Us", hash: "follow-us" },
+              ]}
             />
             <NavBarLink
               page="/about"
@@ -58,6 +64,11 @@ export default function Navbar() {
               fontSize={14}
               alignment="center"
               colour="white"
+              subLinks={[
+                { text: "Executive Team", hash: "executive-team" },
+                { text: "Portfolio Managers", hash: "portfolio-managers" },
+                { text: "Past Executives", hash: "past-executives" },
+              ]}
             />
             <NavBarLink
               page="/fund"
@@ -67,7 +78,7 @@ export default function Navbar() {
               alignment="center"
               colour="white"
               subLinks={[
-                { text: "Coverage Groups", hash: "coverage-groups" },
+                { text: "Fund & Coverage Groups", hash: "coverage-groups" },
                 { text: "Past Pitches", hash: "past-pitches" },
               ]}
             />
@@ -86,6 +97,10 @@ export default function Navbar() {
               fontSize={14}
               alignment="center"
               colour="white"
+              subLinks={[
+                { text: "Club Events", hash: "events" },
+                { text: "Educationals", hash: "educationals" },
+              ]}
             />
             <NavBarLink
               page="/join"

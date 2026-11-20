@@ -7,7 +7,10 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <Hero />
-      <div className="flex flex-col items-center pb-[60px] pt-[80px] px-6">
+      <div
+        id="our-history"
+        className="flex flex-col items-center pb-[60px] pt-[80px] px-6 scroll-mt-[75px]"
+      >
         <h1 className="text-[60px] font-bold text-center mb-6 text-[var(--color-primary)]">
           Our History
         </h1>
