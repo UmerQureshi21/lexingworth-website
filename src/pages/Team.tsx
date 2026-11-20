@@ -53,6 +53,119 @@ const portfolioManagers: Member[] = [
   },
 ];
 
+interface PastExec {
+  name: string;
+  role: string;
+  linkedin?: string;
+}
+
+// LinkedIn profiles for past executives, applied to every year they appear.
+const pastExecLinkedin: Record<string, string> = {
+  "Stephan Matrakchine": "https://www.linkedin.com/in/smatrakchine/",
+  "Anthony Sebanc": "https://www.linkedin.com/in/sebanc/",
+  "Alexander Kamenskiy": "https://www.linkedin.com/in/kamenska/",
+  "Mark Jawornicki": "https://www.linkedin.com/in/markjawornicki/",
+  "Nikita Gaind": "https://www.linkedin.com/in/nikitagaind/",
+  "Robert Radovini": "https://www.linkedin.com/in/robert-radovini/",
+  "Siddhant Kharbanda": "https://www.linkedin.com/in/siddhantkharbanda/",
+  "Mathew Persadie": "https://www.linkedin.com/in/matthewpersadie/",
+  "Vrushin Bhatt": "https://www.linkedin.com/in/vrushinbhatt/",
+  "Gaurav Khanna": "https://www.linkedin.com/in/khannagaurav1/",
+  "Farhaan Syed": "https://www.linkedin.com/in/farhaan-syed/",
+  "Rohin Mahendra": "https://www.linkedin.com/in/rohin-mahendra/",
+  "Allen Zhou": "https://www.linkedin.com/in/allen-zhou-/",
+  "Paul Lapinski": "https://www.linkedin.com/in/paul-lapinski-05a05z/",
+};
+
+// Past executive teams by year. Add names to each year's list.
+const pastExecutives: { year: string; members: PastExec[] }[] = [
+  {
+    year: "2026–2027",
+    members: [
+      {
+        name: "Noah Patel",
+        role: "CEO",
+        linkedin: "https://www.linkedin.com/in/noah-patel/",
+      },
+      {
+        name: "Ammar Malick",
+        role: "CIO",
+        linkedin: "https://www.linkedin.com/in/ammarmalick/",
+      },
+    ],
+  },
+  {
+    year: "2025–2026",
+    members: [
+      { name: "Rohin Mahendra", role: "Co-CEO" },
+      { name: "Farhaan Syed", role: "Co-CEO" },
+      { name: "Allen Zhou", role: "CIO" },
+      { name: "Paul Lapinski", role: "COO" },
+    ],
+  },
+  {
+    year: "2024–2025",
+    members: [
+      { name: "Gaurav Khanna", role: "CEO" },
+      { name: "Farhaan Syed", role: "CIO" },
+      { name: "Rohin Mahendra", role: "COO" },
+    ],
+  },
+  {
+    year: "2023–2024",
+    members: [
+      { name: "Siddhant Kharbanda", role: "CEO" },
+      { name: "Mathew Persadie", role: "COO" },
+      { name: "Vrushin Bhatt", role: "CIO" },
+    ],
+  },
+  {
+    year: "2022–2023",
+    members: [
+      { name: "Nikita Gaind", role: "CEO" },
+      { name: "Robert Radovini", role: "COO" },
+      { name: "Mathew Persadie", role: "COO" },
+    ],
+  },
+  {
+    year: "2021–2022",
+    members: [
+      { name: "Mark Jawornicki", role: "CEO" },
+      { name: "Nikita Gaind", role: "COO" },
+      { name: "Robert Radovini", role: "CIO" },
+    ],
+  },
+  {
+    year: "2020–2021",
+    members: [
+      { name: "Anthony Sebanc", role: "CEO" },
+      { name: "Mark Jawornicki", role: "COO" },
+      { name: "Alexander Kamenskiy", role: "CIO" },
+    ],
+  },
+  {
+    year: "2019–2020",
+    members: [
+      { name: "Stephan Matrakchine", role: "CEO" },
+      { name: "Anthony Sebanc", role: "COO" },
+    ],
+  },
+  {
+    year: "2018–2019",
+    members: [
+      { name: "Stephan Matrakchine", role: "CEO" },
+      { name: "Anthony Sebanc", role: "COO" },
+    ],
+  },
+  {
+    year: "2017–2018",
+    members: [
+      { name: "Stephan Matrakchine", role: "Co-Founder" },
+      { name: "Anthony Sebanc", role: "Co-Founder" },
+    ],
+  },
+];
+
 const teamStats = [
   { value: "100+", label: "Alumni" },
   { value: "33", label: "Current Members" },
@@ -172,6 +285,56 @@ export default function Team() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
             {portfolioManagers.map((member) => (
               <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-white px-6 py-[120px]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
+            Past Executives
+          </h2>
+          <div className="max-w-5xl mx-auto mt-12 border-t border-gray-200">
+            {pastExecutives.map((term) => (
+              <div
+                key={term.year}
+                className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-8 py-5 border-b border-gray-200"
+              >
+                <p className="sm:w-32 shrink-0 font-semibold text-[var(--color-primary)]">
+                  {term.year}
+                </p>
+                <p className="text-gray-700">
+                  {term.members.length > 0
+                    ? term.members.map((m, i) => {
+                        const linkedin =
+                          m.linkedin ?? pastExecLinkedin[m.name];
+                        return (
+                        <span key={m.name}>
+                          {i > 0 && (
+                            <span className="mx-2 text-gray-400">·</span>
+                          )}
+                          <span className="whitespace-nowrap">
+                          {linkedin ? (
+                            <a
+                              href={linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-[var(--color-primary)] hover:underline underline-offset-4"
+                            >
+                              {m.name}
+                            </a>
+                          ) : (
+                            m.name
+                          )}{" "}
+                          ({m.role})
+                          </span>
+                        </span>
+                        );
+                      })
+                    : "—"}
+                </p>
+              </div>
             ))}
           </div>
         </div>
