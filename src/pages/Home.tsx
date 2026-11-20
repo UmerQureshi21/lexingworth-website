@@ -15,9 +15,10 @@ export default function Home() {
           Our History
         </h1>
         <p className="max-w-3xl text-center text-lg leading-relaxed text-gray-800">
-          Founded in 2017 at McMaster University's DeGroote School of
-          Business, Lexingworth Capital grew from a small group of students
-          into a full student-run investment club, building a track record of
+          Lexingworth Capital was founded in 2017 by Stephan Matrakchine and
+          Anthony Sebanc at McMaster University's DeGroote School of Business.
+          Since then, it has grown from a small group of students into a full
+          student-run investment club, building a track record of
           stock pitch competitions and hands-on portfolio management.
         </p>
       </div>
