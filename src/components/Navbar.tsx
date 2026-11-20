@@ -66,6 +66,10 @@ export default function Navbar() {
               fontSize={14}
               alignment="center"
               colour="white"
+              subLinks={[
+                { text: "Coverage Groups", hash: "coverage-groups" },
+                { text: "Past Pitches", hash: "past-pitches" },
+              ]}
             />
             <NavBarLink
               page="/placements"

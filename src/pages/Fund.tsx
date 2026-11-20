@@ -1,30 +1,3 @@
-const pillars = [
-  {
-    number: "01",
-    title: "Research-Driven",
-    description:
-      "Every investment decision is grounded in rigorous fundamental research, disciplined analysis, and peer review before it's added to our portfolio.",
-  },
-  {
-    number: "02",
-    title: "Hands-On Experience",
-    description:
-      "Members manage a simulated portfolio and pitch ideas at general meetings, gaining practical, real-world experience in a low-stakes setting.",
-  },
-  {
-    number: "03",
-    title: "Mentorship & Alumni",
-    description:
-      "An active alumni network across leading firms works directly with current members to help them break into the industry.",
-  },
-  {
-    number: "04",
-    title: "Competitive Excellence",
-    description:
-      "Our teams regularly compete in stock pitch competitions, sharpening the same skills used by professional investors.",
-  },
-];
-
 const coverageGroups = [
   {
     name: "Consumer & Retail",
@@ -63,6 +36,80 @@ const coverageGroups = [
   },
 ];
 
+// Past stock pitches, newest first. Cover images live in public/pitches/.
+const pastPitches = [
+  {
+    company: "Aritzia Inc.",
+    ticker: "TSX: ATX",
+    date: "November 16, 2026",
+    cover: "/pitches/aritzia.png",
+    team: [
+      "Vidhi Desai",
+      "Christian Mena Garcia",
+      "Hamza Yasin",
+      "Arshia Kaura",
+      "Matan Shikhman",
+      "Matthew Mitchell",
+    ],
+  },
+  {
+    company: "TransMedics Group",
+    ticker: "NASDAQ: TMDX",
+    date: "November 16, 2026",
+    cover: "/pitches/transmedics.png",
+    team: [
+      "Asher Ali Khan",
+      "Jed Rasiah",
+      "Mehakpreet Thind",
+      "Muhammad Khan",
+      "Omar Khan",
+      "Omer Yormazoglu",
+      "Yusuf Khan",
+    ],
+  },
+  {
+    company: "Aecon Group Ltd.",
+    ticker: "TSX: ARE",
+    date: "November 16, 2026",
+    cover: "/pitches/aecon.png",
+    team: [
+      "Daniel Levy",
+      "Fawaz Tehami",
+      "Isaiah Knox",
+      "Daniel Payne",
+      "Ian Sheppard",
+    ],
+  },
+  {
+    company: "Rambus Inc.",
+    ticker: "NASDAQ: RMBS",
+    date: "November 16, 2026",
+    cover: "/pitches/rambus.png",
+    team: [
+      "Adriano Bertolo",
+      "Aidan Suri",
+      "Nathan Brooks",
+      "Seth O'Brien",
+      "Daniel Franchi",
+      "Owen Alexander",
+      "Hamza Khokhawala",
+    ],
+  },
+  {
+    company: "Bird Construction",
+    ticker: "TSX: BDT",
+    date: "January 5, 2025",
+    cover: "/pitches/bird-construction.png",
+    team: [
+      "Alexandre Noolandi",
+      "Nabeel Mirza",
+      "Noah Patel",
+      "Veer Sarin",
+      "James Abraham",
+    ],
+  },
+];
+
 export default function Fund() {
   return (
     <div className="w-full flex flex-col items-center">
@@ -90,37 +137,6 @@ export default function Fund() {
         </div>
       </div>
 
-      <div className="w-full bg-white px-6 py-[120px]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4">
-            Our Approach
-          </h2>
-          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16">
-            Four principles guide how we operate, from the way we research
-            ideas to the way we support our members long after they graduate.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.number}
-                className="border-t-2 border-[var(--color-primary)] pt-6"
-              >
-                <span className="text-sm font-semibold tracking-widest text-gray-400">
-                  {pillar.number}
-                </span>
-                <h3 className="text-xl font-semibold text-[var(--color-primary)] mt-2 mb-3">
-                  {pillar.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  {pillar.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <div className="w-full relative h-[400px] overflow-hidden">
         <img
           src="/photo12.png"
@@ -130,7 +146,10 @@ export default function Fund() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/70 via-[var(--color-primary)]/40 to-[var(--color-primary)]/70" />
       </div>
 
-      <div className="w-full max-w-6xl px-6 py-[100px]">
+      <div
+        id="coverage-groups"
+        className="w-full max-w-6xl px-6 py-[100px] scroll-mt-[90px]"
+      >
         <h2 className="text-2xl font-semibold text-[var(--color-primary)] mb-10 text-center">
           Coverage Groups
         </h2>
@@ -151,6 +170,44 @@ export default function Fund() {
               </p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div
+        id="past-pitches"
+        className="w-full bg-[var(--color-cream)] px-6 py-[120px] scroll-mt-[90px]"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[36px] font-bold text-[var(--color-primary)] mb-4 text-center">
+            Past Pitches
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-700 max-w-2xl mb-16 mx-auto text-center">
+            A selection of the stock pitches our teams have researched and
+            presented.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            {pastPitches.map((pitch) => (
+              <div key={`${pitch.company}-${pitch.date}`}>
+                <img
+                  src={pitch.cover}
+                  alt={`${pitch.company} stock pitch cover`}
+                  loading="lazy"
+                  className="w-full aspect-[4/3] object-cover border border-[var(--color-primary)]/20 shadow-sm"
+                />
+                <h3 className="text-xl font-semibold text-[var(--color-primary)] mt-4">
+                  {pitch.company}{" "}
+                  <span className="text-gray-500 font-normal">
+                    ({pitch.ticker})
+                  </span>
+                </h3>
+                <p className="text-sm text-gray-500 mt-1">{pitch.date}</p>
+                <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                  {pitch.team.join(", ")}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
