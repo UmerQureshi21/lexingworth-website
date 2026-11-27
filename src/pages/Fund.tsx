@@ -108,6 +108,39 @@ const pastPitches = [
       "James Abraham",
     ],
   },
+  {
+    company: "PayPal",
+    ticker: "NASDAQ: PYPL",
+    date: "Fall 2020",
+    cover: "/pitches/paypal.png",
+    team: ["Esther Chen", "Mark Jawornicki", "Nikita Gaind", "Leon Tam"],
+  },
+  {
+    company: "Constellation Brands",
+    ticker: "NYSE: STZ",
+    date: "Fall 2020",
+    cover: "/pitches/constellation-brands.png",
+    team: ["Cristina Da Silva", "Kyle Perera", "Taki Wong", "Raveena Gil"],
+  },
+  {
+    company: "Brookfield Renewable Partners",
+    ticker: "TSX: BEP.UN",
+    date: "Fall 2020",
+    cover: "/pitches/brookfield-renewable.png",
+    team: ["Peter Zheng", "Robert Radovini"],
+  },
+  {
+    company: "Biogen",
+    ticker: "NASDAQ: BIIB",
+    date: "Fall 2020",
+    cover: "/pitches/biogen.png",
+    team: [
+      "Alexander Kamenskiy",
+      "Anthony Sebanc",
+      "Mackenzie Sesto",
+      "Matthew Lebre",
+    ],
+  },
 ];
 
 export default function Fund() {
